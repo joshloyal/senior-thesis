@@ -1,0 +1,232 @@
+\documentclass{atlasnote} 
+
+
+%\documentclass[usetikz]{atlasnote} % the 'usetikz' option loads tikz.sty in the proper place, 
+                                   % avoiding conflicts with graphicx.sty.
+                                   % Don't know what tikz.st is? Just ignore this line! :-)
+
+%\documentclass[coverpage]{atlasnote} % the 'coverpage' option loads the ATLAS Cover Page package 
+                                      % ans makes sure that the cover page is generated before the
+                                      % note title page. Make sure that the latest version of
+                                      % of 'atlascover.sty. is installed on your system!
+
+%\usepackage{graphicx} % This is already loaded by the atlasnote class
+                       % Just use it to include your plots!
+
+
+\usepackage[section] {placeins}% to prevent "too many unprocessed floats" error. Lily.
+
+
+% default location 
+\graphicspath{{./figures/}}
+
+\usepackage{amsmath}
+\usepackage{atlasphysics}
+\usepackage{url}
+%\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{atlasphysics}
+\usepackage{rotating} 
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{setspace}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+% define some useful shortcuts
+\newcommand\fb{$\mathrm{fb}^{-1}$}
+\newcommand\Zgamma{$Z\gamma$}
+\newcommand\HToZg{$H \to Z\gamma$\ }
+\newcommand\dm{\ensuremath{\Delta m}\ }
+\newcommand\ZBoson{$Z$\ }
+\newcommand\WBoson{$W$\ }
+\newcommand\WBosons{$W^{\pm}$\ }
+\def\LL    {\ensuremath{\mathcal{L}}}
+\def\vecth {\ensuremath{\boldmath \theta}}
+\newcommand\mll {\ensuremath{m_{\ell \ell}}\ }
+\newcommand\mllg{\ensuremath{m_{\ell \ell \gamma}}\ }
+\newcommand{\mbf}{\mathbf}
+\newcommand{\tabscript}[3]{%
+ 	\setlength{\fboxrule}{0pt}%
+ 	\fbox{\ensuremath{#1^{#2}_{#3}}}%
+}%for super and sub scripts  in tabulars
+\def\progname#1{{\sc #1}}
+\def\brocket#1{\left\langle #1 \right\rangle}
+\newcommand{\refF}[1]{Figure \ref{#1}}
+\newcommand{\refT}[1]{Table \ref{#1}}
+\newcommand{\refS}[1]{Section \ref{#1}}
+\newcommand{\refC}[1]{Chapter \ref{#1}}
+\newcommand{\refA}[1]{Appendix \ref{#1}}
+\newcommand{\refE}[1]{(\ref{#1})}
+%% \renewcommand{\labelitemi}{-}
+
+%%%%%%% Analysis numbers %%%%%%%
+\newcommand\lumiseventev{4.6}
+\newcommand\lumieighttev{20.7}
+\newcommand\totlumieighttev{20.7}
+\newcommand\lumierrseventev{0.1}
+\newcommand\lumierreighttev{0.7}
+
+\newcommand\pval{\ensuremath{p_0}}
+
+% min observed p-value
+\newcommand\pvaluelow{0.042}
+% max observed p-value
+\newcommand\pvaluehigh{0.966}
+% observed p-value at 125 GeV
+\newcommand\pvaluehiggs{0.188}
+% observed p-value at 126.5 GeV
+% \newcommand\pvaluehiggs{0.468}
+% min observed significance
+\newcommand\sigmalow{-1.83}
+% max observed significance
+\newcommand\sigmahigh{1.61}
+% observed significance at 125 GeV
+\newcommand\sigmahiggs{0.89}
+% observed significance at 126.5 GeV
+% \newcommand\sigmahiggs{0.08}
+% min expected p-value
+\newcommand\pvaluelowexp{0.40}
+% max expected p-value
+\newcommand\pvaluehighexp{0.46}
+% expected p-value at 125 GeV
+\newcommand\pvaluehiggsexp{0.443}
+% expected p-value at 126.5 GeV
+%\newcommand\pvaluehiggsexp{0.440}
+% min expected significance
+\newcommand\sigmalowexp{0.25}
+% max expected significance
+\newcommand\sigmahighexp{0.26}
+% expected significance at 125 GeV
+\newcommand\sigmahiggsexp{0.14}
+% expected significance at 126.5 GeV
+% \newcommand\sigmahiggsexp{0.15}
+% min expected exclusion
+\newcommand\excllowexp{7.3}
+% max expected exclusion
+\newcommand\exclhighexp{22}
+% expected exclusion at 125 GeV
+\newcommand\exclhiggsexp{13.5}
+% expected exclusion at 126.5 GeV
+% \newcommand\exclhiggsexp{12.5}
+% min observed exclusion
+\newcommand\excllow{5.4}
+% max observed exclusion
+\newcommand\exclhigh{37}
+% observed exclusion at 125 GeV
+\newcommand\exclhiggs{18.2} 
+% observed exclusion at 126.5 GeV
+%\newcommand\exclhiggs{12.9}
+% exclusion without syst errors, at 125 GeV
+\newcommand\exclhiggsnosyst{17.4}
+\newcommand\exclhiggsexpnosyst{12.9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           Title page             % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\skipbeforetitle{10pt}
+
+%\atlasnote{1.0} 
+
+\title{\boldmath Search for the Standard Model Higgs boson in the $H \ra Z\gamma$ decay mode with $pp$ collisions at $\sqrt{s}=7$ and $8$ TeV}
+
+\input{authors.tex}
+
+% Date: if not given, uses current date
+\date{\today}
+
+% Draft version: if given, adds draft version on front page, a
+% 'DRAFT' box on top of each other page, and line numbers to easy
+% commenting. Comment or remove in final version.
+% \draftversion{1.0}
+
+% Journal: adds a 
+%\journal{Phys. Lett. B} 
+
+\doublespacing
+
+% Abstract
+\abstracttext{
+\singlespacing
+The ATLAS and CMS collaborations have observed a Higgs-like boson
+with a measured mass of 125.2 $\pm$ 0.3 (\emph{stat}) $\pm$ 0.6 (\emph{sys}) GeV 
+using data taken from the Large
+Hadron Collider (LHC) in Geneva, Switzerland. Now it is important to understand
+the various properties of the Higgs-like resonance using all of the available
+information provided by the ATLAS experiment. As such, a search for the Standard
+Model Higgs boson in the decay channel \HToZg, $Z\ra\ell^+\ell^-$, where
+$\ell = e$ or $\mu$, was conducted using proton-proton collisions recorded
+with the ATLAS detector at the LHC. The distribution of the difference \dm between 
+the final state three-body mass \mllg and the di-lepton invariant mass \mll
+is compared to Standard Model (SM) background expectations. No significant
+deviation from the SM prediciton is observed and upper limits on the 
+cross-section of a Standard Model Higgs boson with a mass between 120 and 150 GeV
+are derived. The expected exclusion limits at 95\% confidence level range between
+\excllowexp\ and \exclhighexp\ times the predicted Standard Model
+cross section.
+The observed exclusion limits range between \excllow\ and \exclhigh\
+times the Standard Model cross section.
+For a Higgs boson mass of 125 GeV, the expected and observed limits
+are \exclhiggsexp\ and \exclhiggs\ times the Standard Model, respectively.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%            Content               % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% Some variable definitions
+\input{definitions}
+
+\tableofcontents
+
+\newpage
+
+\input{sec_intro}
+\label{sec:intro}
+
+\input{sec_theory}
+
+\input{sec_atlas}
+\label{sec:atlas}
+
+\input{sec_sigbkg}
+\label{sec:sigbkg}
+
+\input{sec_event}
+\label{sec:event}
+
+\input{sec_compare}
+\label{sec:compare}
+
+\input{sec_signal}
+\label{sec:signal}
+
+\input{sec_background}
+\label{sec:background}
+
+\input{sec_sys}
+\label{sec:sys}
+
+\input{sec_results}
+\label{sec:results}
+
+\bibliographystyle{atlasnote}
+\bibliography{biblio}
+
+\end{document}
+
+
