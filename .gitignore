@@ -1,4 +1,5 @@
 *~
 .DS_Store
 *.pdf
-!thesis.pdf
+thesis.*
+!thesis.tex
