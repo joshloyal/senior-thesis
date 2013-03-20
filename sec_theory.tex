@@ -55,7 +55,7 @@ physics of the strong force. More importantly this symmetry predicts that the
 scattering rates of the interactions
 \begin{align*}
     & p + p \rightarrow \pi^+ + d \\
-    & p + n \rightarrow \underbrace{\pi^0}_{\text{pion}} + \underbrace{d}_{\text{deuteron}}
+    & \underbrace{p}_{\text{proton}} + \underbrace{n}_{\text{nuetron}} \rightarrow \underbrace{\pi^0}_{\text{pion}} + \underbrace{d}_{\text{deuteron}}
 \end{align*}
 should be equal. The experimental verification of this prediction convinced
 physicists that these internal symmetries can be used to study and predict
@@ -70,25 +70,18 @@ much of the phenomena found in nature is known as the Standard Model.
 
 \subsection{The Standard Model}
 \label{subsec:StandardModel}
-An picture of the Standard Model of particle physics is best obtained
+A picture of the Standard Model of particle physics is best obtained
 by moving away from the abstract gauge-theory formulation and instead considering
 the predictive outcomes of the theory. The Standard Model provides physicists with
 the current answer to the question of what the world is made of and is displayed
 in Figure~\ref{fig:sm}. This table is reminiscent
 of the periodic table developed by chemists to explain the various atoms
-found in nature. A surprising property of the Standard Model is that it consists
-of only 16 different particles. There are six quarks, shown in purple, which
-are the building blocks of the familiar nucleons, i.e. the proton and neutron.
-Another six particles known as leptons, marked in green, include one of
-the most familiar fundamental particles, the electron, 
-which is responsible for the operation of most household circuits. And
-finally there are the four gauge bosons highlighted in red, which are of the 
-greatest relevance to the measurement presented in this paper.
-The gauge bosons are responsible for mediating three 
-out of the four fundamental forces in nature: the electromagnetic, strong, and 
-weak interactions. As of now, theorists have been unable to incorporate the 
-gravitational force, a pervasive component of the macroscopic world,
-into the current gauge-theory of particle physics.
+found in nature. Similar to the periodic table, the placement of particles in 
+Figure~\ref{fig:sm} tells us something about the structure of these particles and
+how they interact with each other. Some of these properties are labeled on
+the figure including the particle's mass, charge, and 
+spin\footnote{Spin is an internal quantum number of a particle which manifests 
+itself as a particles intrinsic angular momentum.}.
 
 \begin{figure}[htbp]
     \centering
@@ -100,36 +93,110 @@ into the current gauge-theory of particle physics.
     \label{fig:sm}
 \end{figure}
 
+A surprising property of the Standard Model is that it consists
+of only 16 different particles. The first three columns consist of particles
+that make up everyday matter known as fermions. A fermion is any particle that
+has spin 1/2. 
+For example, the first column contains two particles shown in purple known as
+the up and down quarks, which are the building blocks of the familiar nucleons, 
+i.e. the proton and the neutron. 
+In addition, the second two particles marked in green
+are the electron neutrino, which is produced abundantly in nuclear beta decay
+($n \to p + e^- + \bar{\nu}_e$), as well as one of the most familiar fundamental
+particles, the electron. In fact the atoms of the periodic table result when
+the electron binds with the nucleons made of up and down quarks to form atoms. 
+The Standard Model contains
+three copies of this column structure composed of ever heavier particles.
+
+The fundamental fermions are further divided into two types: quarks and leptons.
+These forms of matter are separated by the various `charges' they carry. Quarks
+(colored in purple in Figure~\ref{fig:sm})
+carry both electric and color charge, so that they are the only particles that
+interact via the strong force. 
+On the other hand, leptons (colored in green in Figure~\ref{fig:sm}) 
+do not carry color charge, so they do not interact with the strong force.
+An important observation is that the ability of the quarks to interact via the
+strong force allows them to overcome their electromagnetic repulsion and bind
+together to form hadrons, particles composed of quarks. The proton and nuetron
+are both examples of hadrons. Hadrons are further classified by the number
+of constituent quarks that make them up. Baryons are made of three quarks while
+mesons contain a quark and an anti-quark 
+The proton, which is made of $uud$ quarks, is a baryon and
+the $\pi^+$ is an example of a meson made up of $u\bar d$ quarks.
+The various particle classifications used in particle physics are summarized in
+\refF{fig:partclass}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.08, angle=0]{./figures/Bosons-Hadrons-Fermions}
+    \caption{The different classifications of particles used in particle physics. Notice that hadrons are composed of both mesons and baryons, which are made up of quarks.
+    The leptons are considered fermions because they have spin 1/2. The force carrying particles are bosons.}
+    \label{fig:partclass}
+\end{figure}
+
+Finally there are four force carrying particles highlighted in red associated
+with the gauge symmetries of the Standard Model. Mathematically, the gauge 
+symmetry of the Standard Model is labeled as 
+\[
+\underbrace{\text{SU}(3)}_{\text{Strong Force}} \times \underbrace{\text{SU}(2) \times \text{U}(1)}_{\text{Electroweak Force}}.
+\]
+What this means is that each gauge symmetry is associated with particles.
+These particles are known as gauge bosons and are responsible for mediating three 
+out of the four fundamental forces in nature: the electromagnetic, strong, and 
+weak interactions. As of now, theorists have been unable to incorporate the 
+gravitational force, a pervasive component of the macroscopic world,
+into the current gauge-theory of particle physics.
+The SU(3) gauge symmetry describes the strong force, which
+is mediated by the massless gluon. This force is responsible for binding
+quarks together to form protons and neutrons. The weak interaction is
+contained in the SU(2) gauge symmetry and is transmitted by the massive \WBosons
+and \ZBoson bosons. The weak force is responsible for radioactive decays. The
+last symmetry of the Standard Model, U(1), describes the familiar electromagnetic
+interaction and is carried by the massless photon. The interaction of the force
+carrying bosons with the Standard Model particles is graphically represented in 
+\refF{fig:interactions}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.1, angle=0]{./figures/Elementary_particle_interactions}
+    \caption{A graphical summary of the various interactions between particles 
+    predicted by the Standard Model. 
+    Notice that the leptons do not couple to the gluons, while
+    the quarks couple to gluons as well as the electroweak force carriers.}
+    \label{fig:interactions}
+\end{figure}
+
+The Standard Model together with Einstein's theory of gravity describes almost
+all known phenomena from the largest scales to the smallest scales. Despite
+its ability to precisely predict a large variety of experimental results, the
+Standard Model does not account for the complete picture. Although not exhaustive
+the following list contains a few inadequacies of the Standard Model:
+1) It does not attempt to explain gravitation. As of yet a quantum theory of
+gravity remains unknown.
+2) The model contains 19 numerical constants whose values are not predicted
+by the theory.
+3) The Standard Model has no mechanism to explain the presence of the measured
+missing mass and energy in the universe, the so called dark matter and dark energy 
+problem. Despite these shortcomings, the gauge symmetries of the Standard Model 
+remain a very powerful predictive tool responsible for explaining much of
+what we know about the subatomic world.
+
+
 \subsection{The Higgs Mechanism}
 \label{subsec:higgsmec}
-The Higgs boson is an essential component of the Standard Model and plays
-an important role in the predictive power of the theory. Like much of modern
-physics, the Standard Model relies heavily on the symmetries of nature. Just
-as concepts such as conservation of momentum and energy can be tied to the 
-fact that a system is symmetric under translations in space and time\footnote{
-This result is known as Noether's Theorem and can be attributed to the 
-brilliant German mathematician Emmy Noether.}, much of the mathematical 
-framework of the Standard Model is based on internal symmetries 
-known as gauge symmetries. In fact there are three gauge symmetries found
-in the Standard Model\footnote{ In group theoretic language the symmetries of
-the Standard Model can be written as $SU(3) \times SU(2) \times U(1)$.} 
-each of which predicts a force carrying particle that mediates one of the 
-aforementioned interactions of nature. The photon mediates the 
-electromagnetic interaction. The massless gluon is responsible for the strong 
-interaction, which binds quarks together to form protons and neutrons.
-And finally, the weak interaction, which causes radioactive decays, 
-is mediated by the massive \WBosons and \ZBoson bosons. The problem with all 
-of this symmetry is that it predicts that the weak nuclear force is a long
+However, there is a problem with all of these gauge symmetries.
+They predicts that the weak nuclear force is a long
 range force, something which is not observed in nature. The reason for this
 discrepancy can be traced back to the fact that the \WBoson and \ZBoson bosons are
 not massless particles, but have a mass of roughly 80 and 90 GeV respectively. 
-In addition, these internal gauge symmetries also predict that other 
+In addition, these internal gauge symmetries predict that other 
 fundamental particles, such as the electron, are massless. In order to solve
 this apparent predicament one needs to introduce a mechanism that keeps the
 equations that govern the Standard Model's behavior symmetric, but allows for
 some asymmetric lowest energy states, i.e. 'ground states'. 
-This is accomplished with a theoretical mechanism known as spontaneous
-symmetry breaking or in this special case the Higgs mechanism.
+This is accomplished by the Higgs mechanism, which combines two theoretical ideas
+known as spontaneous symmetry breaking and local gauge invariance to give particles 
+mass.
 
 \subsection{Production Process}
 \label{subsec:prodproc}
@@ -145,32 +212,3 @@ symmetry breaking or in this special case the Higgs mechanism.
   \label{fig:feynman}
   \end{center}
 \end{figure}
-
-% There are many ways to analyze the dynamics of a particle classically; however,
-% the one most suited for studying the symmetries of a system is Lagrangian Mechanics.
-% The study of such a systems begins by defining a Lagrangian function as
-% \begin{equation}
-%     L(q, \dot q) = T - U 
-% \end{equation}
-% where $T$ and $U$ are the particle's kinetic and potential energy respectively, 
-% so that the Lagrangian is a function of the particle's coordinates and velocities. 
-% The mathematics behind the Standard Model is formulated in terms of the Langrian
-% approach to mechanics; however, a minor detail arises because the Standard Model
-% describes fields not particles.
-% 
-% The Standard Model is a Quantum Field Theory meaning that it is not interested in
-% describing particles, which are localized entities, but in describing the
-% dynamics of fields, which occupy some extended region of space. For example the
-% electromagnetic field $\mathbf{E}$ is a vector vield that is described 
-% by three component functions that can change throughout space and time: 
-% $\mathbf{E}(\phi_i) = (\,\phi_x(x,y,z,t), \phi_y(x,y,z,t), \phi_z(x,y,z,t)\,)$. 
-% As such the Lagrangians contained in the Standard Model are functions of these
-% fields and their derivative.
-% 
-% As an introduction to how these mathematical formalism works let's consider the
-% Lagrangian descibing QED:
-% \begin{equation}
-% \mathcal{L} = \frac{-1}{16\pi}\left(\partial^{\mu} A^{\nu} - \partial^{\nu}A^{\mu}\right) = 
-% \frac{-1}{16\pi} F^{\mu\nu}F_{\mu\nu}.
-% \end{equation}
-% were $A^{\mu} = (\phi, \mathbf{A})$ is the electomagnetic potential.
