@@ -184,19 +184,128 @@ what we know about the subatomic world.
 
 \subsection{The Higgs Mechanism}
 \label{subsec:higgsmec}
-However, there is a problem with all of these gauge symmetries.
-They predicts that the weak nuclear force is a long
-range force, something which is not observed in nature. The reason for this
-discrepancy can be traced back to the fact that the \WBoson and \ZBoson bosons are
-not massless particles, but have a mass of roughly 80 and 90 GeV respectively. 
-In addition, these internal gauge symmetries predict that other 
-fundamental particles, such as the electron, are massless. In order to solve
-this apparent predicament one needs to introduce a mechanism that keeps the
-equations that govern the Standard Model's behavior symmetric, but allows for
-some asymmetric lowest energy states, i.e. 'ground states'. 
+However, there is a problem with this extensive use of gauge symmetry.
+While the Standard Model formulated in this way
+is able to correctly describe much of what is seen by experiment, it
+incorrectly predicts that the weak force is a long range force. There is
+nothing inherently wrong with this outcome; however, observations show 
+that the weak nuclear force has a range of roughly $10^{-18}$ meters, roughly
+this size of a nucleus. The reason for this discrepancy is that the
+\WBosons and \ZBoson bosons are
+not massless particles, but have a mass of roughly 80 and 90 GeV respectively
+\footnote{A crude way to see this is to consider Heisenberg's Uncertainty
+principle. The range of the weak force is roughly
+\[
+    R_{\text{weak}} = c\Delta t \le \frac{\hbar c}{\Delta E} = \frac{\hbar c}{2 M_{Z}} \approx 10^{-18}\, \text{m}
+\]
+where $M_{Z}$ is the mass of the \ZBoson boson.
+}.
+In fact, these internal gauge symmetries predict that the other fundamental
+particles, such as the electron, are massless.
+In order to solve this apparent predicament one needs to introduce a mechanism
+that keeps the Standard Model's equations symmetric under the SU(3) $\times$
+SU(2) $\times$ U(1) gauge symmetries since this theory is correct in
+almost all regards, but gives the fundamental particles mass.
 This is accomplished by the Higgs mechanism, which combines two theoretical ideas
-known as spontaneous symmetry breaking and local gauge invariance to give particles 
-mass.
+known as spontaneous symmetry breaking and local gauge invariance to introduce
+mass into the theory.
+
+Spontaneous symmetry breaking provides the solution to the first problem:
+the equations governing a theory's behavior are symmetric, but the lowest
+energy and most probable state, i.e. ground state, is not. Cases of this idea
+are not just confined to subatomic physics, but are commonly found on a
+macroscopic scale. For example consider holding a ruler between your index
+finger and your thumb and squeezing down on the top of the ruler 
+as shown in \refF{fig:ruler}. This system
+is completely symmetric about the axis of the ruler: the force is along the $z$-axis
+and the $z$-axis is the ruler's axis of symmetry. However, when the force
+becomes strong enough, the ruler will snap into a left or right configuration since
+both are ground states for the system. This choice of ground state breaks the
+left-right symmetry of the physical system. A more mathematical presentation
+of this symmetry breaking is presented in \refF{fig:rulerpotential}. The potential
+of the system is plotted as a function of the displacement $y$ of the center of 
+the ruler. The potential is symmetric about the origin $y = 0$; however,
+the system will come to rest at one of the two minimum ground states at $y = 1$ or -1.
+This choice of ground state breaks the symmetry of the potential, although
+the potential remains symmetric.
+
+\begin{figure}[htbp]
+   \centering 
+
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.4, angle=0]{./figures/RulerAxes}
+        \caption{}
+        \label{fig:ruler}
+    \end{subfigure}
+    \quad 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.8, angle=0]{./figures/RulerPotential}
+        \caption{}
+        \label{fig:rulerpotential}
+    \end{subfigure}
+
+    \caption{An example of spontaneous symmetry breaking in a 1-dimensional system
+    is depicted in (a).
+    The buckling of a ruler when a force is applied parallel to its axis of
+    symmetry results in an asymmetric ground state although the original system
+    is symmetric about the $z$-axis. This idea expressed in terms of the system's 
+    potential is shown in (b).}
+    \label{fig:spontaneous}
+\end{figure}
+
+When this idea of spontaneous symmetry breaking is combined with the local gauge
+invariant description of the Standard Model, the familiar masses of the fundamental
+particles are produced. The Higgs mechanism postulates a new field, the Higgs field,
+that permeates throughout space. This field is shown in \refF{fig:higgspotential} and
+the different energy states correspond to any point on the surface of this
+`hat' potential. The point on the top of the hat, indicated by a blue ball
+in \refF{fig:higgspotential}, corresponds to the symmetric ground state. This
+means that the potential looks the same as it is rotated about an
+axis going down through this point\footnote{This 1-dimensional rotational
+symmetry is actually what is meant by a theory being U(1) invariant.}. However,
+this ground state is not the lowest energy state. The minimum energy states
+occur on the circle at the bottom of this hat. Intuitively, nature
+chooses a point randomly at the bottom to call the ground state.
+This state -- in the exact same way as the example of the ruler -- is no longer
+symmetric under rotations, it is an asymmetric ground state.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.35, angle=0]{./figures/HiggsPotential}
+    \caption{The vacuum -- that is, the lowest-energy state -- is described by
+    a random chosen point around the bottom of the hat. In a global symmetry,
+    movements around the bottom of the hat correspond to a massless, spin-zero,
+    Goldstone boson. In the case of a local gauge symmetry this boson combines
+    with the massless spin-one boson to yield a massive spin-one particle. The
+    Higgs boson is a massive spin-zero particle corresponding to quantum
+    fluctuations in the radial direction, oscillating between the center and
+    the side of the hat in the direction of the arrow~\cite{HiggsPic}.}
+    \label{fig:higgspotential}
+\end{figure}
+
+The physical reality described in terms of particles and their masses comes 
+by interpreting this field quantum mechanically.
+In quantum mechanics for every field there is a
+corresponding particle associated with fluctuations about the field's ground
+state. In the case of the Higg's field there are two possible ways to fluctuate
+about the asymmetric ground state: around the smooth surface of the circular well
+or inward about the curved bowl of the hat. This gives rise to two distinct 
+particles. The fluctuations around the bottom of the well give rise to a particle 
+known as a Goldstone boson that remains massless because there is no resistance
+to its movement around the well. However, this extra particle is exactly what
+is needed to cure the problem of missing mass. The Goldstone boson injects
+a needed extra degree of freedom into the theory
+that can be absorbed by the \WBosons and \ZBoson
+bosons to give them mass and make the weak force short ranged. In addition, 
+the Higgs field allows for
+another massive particle corresponding to fluctuations in the radial
+direction: the Higgs boson. In summary, the Higg's mechanism postulates a new field
+radiating throughout space that couples to various particles giving them mass
+and predicts that a new particle known as the Higgs boson should be observable
+in nature.
+
 
 \subsection{Production Process}
 \label{subsec:prodproc}
