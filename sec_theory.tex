@@ -307,8 +307,112 @@ and predicts that a new particle known as the Higgs boson should be observable
 in nature.
 
 
-\subsection{Production Process}
+\subsection{Higgs Production at the LHC}
 \label{subsec:prodproc}
+
+The Higgs mechanism described in \refS{subsec:higgsmec} can be accomplished
+in a variety of different ways. The Standard Model follows the simplest approach
+of introducing a single scalar field, which manifests itself as a single Higgs boson.
+Once this Higgs particle is introduced into the framework of the Standard Model,
+the full machinery of the theory predicts various properties of this new scalar
+particle. For experiments such as the LHC that search for the Higgs boson
+by scattering particles off of each other, a measurable quantity is the
+inclusive scattering cross-section $\sigma(pp \to H + X)$. 
+Experimentally, the scattering cross-section $\sigma(pp \to H + X)$ is the
+intrinsic probability for a proton-proton ($pp$) collision to produce
+a Higgs boson along with any other particles, labeled generically as $X$.
+This quantity is calculated in a way that it is independent of the nature
+of the scattering -- it does not depend on the beam's flux, number of collisions 
+per unit time, etc. -- and depends only on the center of mass energy of the
+$pp$ collision as well as the structure of the physical processes that produce the
+Higgs boson. The relevant mechanisms  for Higgs production 
+at the LHC are gluon fusion and vector boson fusion 
+\cite{LHCHiggsCrossSectionWorkingGroup:2011ti} (Fig. \ref{fig:ggf} and \ref{fig:vbf}).
+The Higgs cross-sections as a function of the Higgs mass are plotted in 
+\refF{fig:ggVBF} for proton-proton center of mass energies of 7 TeV (Fig. \ref{fig:XS7TeV}) and 8 TeV (Fig. \ref{fig:XS8TeV}).
+
+\begin{figure}[htbp]
+   \centering 
+
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.6, angle=0]{./figures/gluonfusion}
+        \caption{}
+        \label{fig:ggf}
+    \end{subfigure}
+    \quad 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.15, angle=0]{./figures/vectorbosonfusion}
+        \caption{}
+        \label{fig:vbf}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.35, angle=0]{./figures/Higgs_XS_7TeV}
+        \caption{}
+        \label{fig:XS7TeV}
+    \end{subfigure}
+    \quad 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.35, angle=0]{./figures/Higgs_XS_8TeV}
+        \caption{}
+        \label{fig:XS8TeV}
+    \end{subfigure}
+
+    \caption{Top: With the current data available from the LHC, the dominant Higgs
+    production mechanisms are gluon-gluon fusion (a) and vector boson fusion (b).
+    Note that the fermion loop in (a) is predominantly mediated by
+    $t$ and $b$ quarks.
+    Bottom-left: SM Higgs boson production cross-section vs. Higgs boson mass
+    at $\sqrt{s}=7$~TeV, for the different production mechanisms.
+    Top-right: SM Higgs boson production cross section vs Higgs
+    boson mass at $\sqrt{s}=8$~TeV, for the different production
+    mechanisms.}
+    \label{fig:ggVBF}
+\end{figure}
+
+
+In addition, the Standard Model predicts that the Higgs boson is an unstable particle
+that lives for roughly $10^{-22}$ seconds before decaying into lighter particles~\cite{LHCHiggsCrossSectionWorkingGroup:2012vm}. 
+The various decay modes of the Higgs boson are presented in \refF{fig:higgsbrs}
+in terms of a quantity known as the branching ratio, $B(H \to X)$. The branching
+ratio $B(H \to X)$ is the probability that the Higgs will decay to particle $X$.
+\refF{fig:higgsbrs} gives this value as a function of the Higgs boson's mass $M_{H}$.
+It should be noted that at the current measured value of the Higgs boson's mass (125 GeV)
+the most likely decays are $H \to WW$, $H \to bb$, and $H \to ZZ$.
+
+\begin{figure}[!htbp]
+  \begin{center}
+  {\includegraphics[scale=0.5, angle=0]{figures/YRHXS2_BR_Fig1}}
+  \caption{SM Higgs boson branching ratios as a function of the Higgs boson mass.}
+  \label{fig:higgsbrs}
+  \end{center}
+\end{figure}
+
+This paper searches for the decay mode \HTollg. This means that the Higgs
+decays into a $Z$ boson and a photon ($\gamma$) and the $Z$ boson subsequently 
+decays into
+two oppositely charged leptons ($\ell = e$, $\mu$). According to the Standard
+Model, the Higgs boson decays to a \Zgamma via a loop diagrams similar to 
+$H \to \gamma\gamma$ (Fig.~\ref{fig:feynman}) with the dominant contributions 
+originating from the top and $W$-mediated amplitudes. These loop diagrams make the
+\HToZg channel sensible to new physics, since the enhancement (or suppression)
+of these decay rates may occur via contributions from new heavy charged particles.
+
+Moving away from the abstract mechanisms of Higgs production, the kinematics
+of \HTollg decays can be described by three angular variables. A schematic
+of this decay process along with the relevant variables is shown in \refF{fig:angles}.
+The angle $\Theta$ is the polar angle between the \Zgamma axis and the beam axis
+in the  Higgs rest frame, and
+$\theta$ and $\phi$ are the polar and azimuthal angels of the leptons in the
+$Z$ decay frame. For a scalar SM Higgs, the distributions of $\Theta$ and
+$\phi$ are isotropic, while the decay rate versus $\theta$ has
+a distribution proportional to $(1 + \cos^2{\theta})$. Knowledge of this 
+distribution could potentially be useful to reduce backgrounds, or given
+a sufficient sample size, determine the spin of the Higgs boson.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -321,3 +425,22 @@ in nature.
   \label{fig:feynman}
   \end{center}
 \end{figure}
+
+\begin{figure}
+  \centering
+  {\includegraphics{figures/angles}}
+  \caption{Definition of kinematic angles in $gg\rightarrow H\rightarrow Z(\ell^{+}\ell^{-}\gamma)$ decay \cite{angular3}.}
+  \label{fig:angles}
+\end{figure}
+
+In summary, the important theoretical quantity for \HToZg production at
+the LHC is the cross-section $\sigma(pp \to H \to Z(\ell^+\ell^-)\gamma)$,
+which is determined from the inclusive cross-section of $pp \to H$ times the
+relevant branching ratios.
+The branching ratio $B(H\to Z\gamma) = 1.54 \times 10^{-3}$ and only represents
+a small fraction of the Higgs boson's possible decays
+\cite{LHCHiggsCrossSectionWorkingGroup:2012vm, LHCHiggsCrossSectionWorkingGroup:2011ti}. For a Higgs boson mass of 125 GeV the predicted $pp \to H$ cross section is 
+$\sigma = 17.5 (22.3)$~pb at 7 (8) TeV. Including $B(Z \to \ell^+\ell^-)$ = 6.7\%
+\cite{PDG2012}
+reduces the total cross section to 1.8 (2.3) fb, roughly similar to that of
+$pp \to H \to ZZ^* \to 4\ell$ and only 5\% of that of $pp \to H \to \gamma\gamma$.
