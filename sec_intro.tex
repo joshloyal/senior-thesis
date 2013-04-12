@@ -1,19 +1,4 @@
-% - Theoretical introduction and motivation
-% - Idea behind the ATLAS experiment and search
-% - Future use of this information
-
 \section{Introduction} % (non-mathematical)
-% Breif introduction to the Standard Model and Gauge Symmetries 
-
-% Motivation for spontaneous symmetry breaking / the higgs mechanism
-
-% The current status of the Higgs search
-
-% Motivation for searching for H->Zg
-
-% The ATLAS experiment and the form of the measurement, 
-% i.e. how and what is measured
-
 Elementary particle physics addresses the question, `What is the world made of?' 
 at the most fundamental level, i.e. on the smallest scale of size. 
 One could easily imagine a world where the elementary building blocks of 
@@ -25,16 +10,20 @@ quantities to form our macroscopic world. This is not the whole story.
 Not only is elementary particle physics concerned with identifying the various 
 fundamental actors of nature, but also how these actors interact amongst each other.
 It is during this investigation that the familiar forces of nature make their
-appearance. This paper is concerned with measuring both of these phenomena through 
-a search for a new particle known as the Higgs boson as well as an investigation of
-how this particle interacts with two other important actors: the photon and the 
-$Z$ boson.
+appearance. 
+Furthermore, a puzzling asymmetry exists amongst these particles and forces:
+some forces are long range while others operate only on an atomic
+scale. Linked to this phenomena is one of the most pressing questions in particle
+physics over the past decades: why do some fundamental particles have mass?
+This paper presents a search for the Higgs boson, the particle 
+behind mass generation in the Standard Model (SM), by probing its interactions with 
+two other important actors: the photon and the $Z$ boson.
 
 On July 4th, 2012 the ATLAS and CMS collaborations both announced the 
 discovery of a particle consistent with the 
 Standard Model Higgs boson~\cite{ATLAS_Higgs,CMS_Higgs}, indicating that
-the discovery of the mechanism behind spontaneous symmetry breaking in the
-Standard Model may be at hand. In addition, the ATLAS experiment measured 
+the discovery of the mechanism that gives the fundamental particles their mass
+may be at hand. In addition, the ATLAS experiment measured 
 this Higgs-like boson's mass to be close to 125 GeV~\cite{ATLAS_Higgs_Dec12}.
 This measurement is only the beginning of a challenging program of `Higgs
 identification' through which the consistency of this new boson with the SM
@@ -43,56 +32,49 @@ increasingly important to measure the properties of this new scalar particle
 as well as its rate of decay for the largest number of experimentally
 viable decay channels. These analyses could result in tension with the SM
 Higgs prediction, for instance the rate of one or more measured decay channels
-may differ from the SM prediction. The simplest mechanism for such a scenario
-is an enhancement/suppression in loop-induced decays
-\footnote{A loop means that particles of any mass can instantly materialize and 
-then disappear during the decay process. The brief-lived virtual particles
-are usually $W$ bosons, but other particles with similar behavior can enter
-the loop, including many beyond the Standard Model particles. This makes decays 
-involving loops very sensitive to new physics at high masses.}
-that are naturally sensitive to couplings to new virtual particles, 
-for instance the decay \HToZg presented in this paper. 
-This would thus be evidence for Beyond the Standard Model (BSM) physics.
+may differ from the SM prediction. 
 
-The main decay modes being probed in the searches
-presented during the July 4th announcement are the $H \to \gamma\gamma$ channel,
-the $H \to WW^* \to 2\ell2\nu$ channel and the 'golden channel',
-$H \to ZZ^* \to 4\ell$. However, little attention has been paid to the 
+The main decay modes probed in the July 4th searches were
+the $H \to \gamma\gamma$ channel, the $H \to WW^* \to 2\ell2\nu$ channel 
+and the 'golden channel', $H \to ZZ^* \to 4\ell$. 
+However, little attention has been paid to the 
 $H \to Z\gamma \to \ell^+\ell^-\gamma$ channel
-despite the fact that its event rate is comparable to that of the golden channel 
-for a 125 GeV Standard Model Higgs boson. The main reason for this is 
+despite the fact that its event rate is comparable to that of the golden  
+channel for a 125 GeV Standard Model Higgs boson. The main reason for this is 
 the low branching ratio for $Z \to \ell^+\ell^-$, the
 probability that a $Z$ boson will decay into two leptons, 
 makes the $Z\gamma$ channel statistically limited. 
-Although, the background rate, the number of non-interesting physics processes
-that contaminate the process of interest, of the $Z\gamma$ channel is higher than
-that of the $ZZ^* \rightarrow 4\ell$ channel
-there are a few important properties that make a study of the $Z\gamma$ channel 
-compelling: 
+However, there are a few important properties that make a study of the 
+$Z\gamma$ channel compelling: 
 1) all final state particles can be measured well with the ATLAS detector;  
 2) the Higgs mass could be measured from the total invariant mass spectrum; 
 3) the spin of the Higgs can be studied by analyzing the angular distribution 
 of the decay products, and 
 4) this channel can be used for setting limits on the Higgs coupling constants.
-In addition, the ratio of $\gamma\gamma$ to $Z\gamma$ branching ratios can
+In addition, the simplest mechanism for probing new physics is through 
+an enhancement/suppression of loop-induced decays\footnote{
+A loop means that particles of any mass can instantly materialize and 
+then disappear during the decay process. The brief-lived virtual particles
+are usually $W$ bosons, but other particles with similar behavior can enter
+the loop, including many beyond the Standard Model particles. This makes decays 
+involving loops very sensitive to new physics at high masses.},
+such as those mediating \HToZg. Also,
+the ratio of $\gamma\gamma$ to $Z\gamma$ decay rates can
 be used to discriminate between certain models of 
 new physics~\cite{Zg_newPhy_1,Zg_newPhy_2, Zg_newPhy_3}.
-All of these measurements will help to identify this new particle sitting
-close to 125 GeV as a Standard Model Higgs boson or something more exotic.
+Overall, the measurement of \HToZg is important for extending our understanding
+of the Higgs mechanism.
 
-% re-write this with my own words....
 This report documents the measurements of the \HToZg production rate observed
 using data from $pp$ collisions provided by the LHC. In the following, the
 theory behind the \HToZg decay is discussed in Section~\ref{sec:theory},
-the ATLAS detector is described in Section~\ref{sec:experiment}, and the signal
-and backgrond simulation samples used in the analysis are presented in
-Section~\ref{sec:sigbkg}. The event selection criteria are described in 
+the ATLAS detector is described in Section~\ref{sec:experiment}, and the
+criteria used to select \HToZg decays from the data is described in 
 Section~\ref{sec:event}. A comparison between the selected data sample and
-the simulation is presented in Section~\ref{sec:compare}. The discrimination
-between signal and background events is performed by means of an unbinned
-maximum likelihood fit, and the estimated signal yield is compared to the one 
-predicted by the Standard Model. The properties of the signal, in terms of
-the expected yields and the signal model used for the fit are described
+the theoretical simulation is presented in 
+Section~\ref{sec:compare}. The discrimination between signal and background 
+events is performed by means of an unbinned maximum likelihood fit.
+The signal model used for the fit are described
 in Section~\ref{sec:signal}, while the choice of the background model adopted
 in the fit is motivated in Section~\ref{sec:background}. After a description of
 the systematic uncertainties in Section~\ref{sec:sys}, Section~\ref{sec:results}

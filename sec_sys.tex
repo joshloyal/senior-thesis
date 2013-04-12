@@ -1,1 +1,239 @@
 \section{Systematic Uncertainties}
+\label{sec:sys}
+A complete model of the signal and background distributions not only require
+a description of the signal and background shapes observed in data, but also 
+a quantification of the various uncertainties involved in the measurement.
+The theoretical and experimental systematic uncertainties are summarized in
+this section.
+
+\subsection{Theoretical Uncertainties}
+There are two sources of theoretical uncertainties on the production cross-section
+of \HToZg events: the uncertainty related to the energy scales used for the
+fixed-order calculation, and the uncertainty from the parton distribution functions
+(PDFs) and the value of $\alphas$ used in the perturbative calculation. 
+
+\begin{itemize}
+\item \textbf{Scale Uncertainties:} 
+In theoretical calculations, the value of observables are obtained using a 
+perturbative expansion. This introduces an uncertainty due to missing higher order
+corrections. In particular, the \HToZg signal cross-section is typically calculated
+with leading-order (LO) matrix elements that can be corrected with higher-order
+QCD (the production of a Higgs boson via gluon fusion is a QCD process) and 
+electroweak corrections (Vector Boson Fusion production).
+
+\item \textbf{Proton Structure Uncertainties:}
+At the LHC Higgs bosons are produced using proton-proton collisions, so
+an understanding of the \HToZg cross-section depends on the internal
+parton structure of the proton. This internal proton structure cannot be
+extracted from perturbation theory ($\alphas$ is large at the low binding
+energies of the proton) and must be measured in the form of parton distribution
+functions (PDFs). Consequently, the statistical and systematic uncertainties 
+of these measurements must be propagated to any calculated cross-section.
+\end{itemize}
+
+The Higgs boson production
+cross-sections and decay branching fractions as functions of the Higgs boson
+mass are compiled, together with uncertainties, in Ref.~\cite{LHCHiggsCrossSectionWorkingGroup:2011ti}.
+For each tested Higgs boson mass hypothesis the uncertainties from Ref.~\cite{LHCHiggsCrossSectionWorkingGroup:2011ti} are used.
+\refT{tab:theory_uncertainties} summarizes uncertainties for a Higgs boson mass of
+125 GeV. They depend only mildly on $m_H$, for $120 \GeV < m_H < 150 \GeV$,
+with the exception of the relative uncertainty on the \HToZg branching fraction,
+which varies between 9.4\% at 120 GeV and 6.2\% at 150 GeV.
+
+Theoretical uncertainties on the background cross-sections do not affect the
+results shown in the next section, because the background normalization and shape
+are obtained through a fit to data.
+
+\begin{table}[!htbp] 
+  \renewcommand{\arraystretch}{1.3}
+  \begin{center}
+    \caption{Theoretical systematic uncertainties for the SM Higgs
+      boson production cross section and branching fraction of the
+      $H\to Z\gamma$ decay at $\sqrt{s} = 7$ and 8 TeV,
+      for a Higgs boson mass of 125 GeV.}
+    \label{tab:theory_uncertainties}
+%\vspace{1mm}
+    \begin{tabular}{l|cc|cc|cc|cc|cc|c}
+      \hline\hline
+$\sqrt{s}$ & \multicolumn{11}{c}{Systematic uncertainty (\%)}\\
+%\hline
+           & \multicolumn{2}{c}{$\sigma(gg\to H)$} & \multicolumn{2}{|c}{$\sigma$(VBF)} & \multicolumn{2}{|c}{$\sigma(WH)$} & \multicolumn{2}{|c}{$\sigma(ZH)$} & \multicolumn{2}{|c|}{$\sigma(t\bar tH)$} & $B(H\to Z\gamma)$ \\
+         & scale & PDF & scale & PDF & scale & PDF & scale & PDF & scale & PDF & \\
+\hline
+7 TeV & $^{+7.1}_{-7.8}$  & $^{+7.6}_{-7.1}$  & {\small $\pm 0.3$} & $^{+2.5}_{-2.1}$ & $^{+0.2}_{-0.8}$ & {\small $\pm 3.5$} & $^{+1.4}_{-1.6}$ & {\small $\pm 3.5$} & $^{+3.3}_{-9.3}$  & {\small $\pm 8.5$} & $^{+9.0}_{-8.8}$ \\
+8 TeV &$^{+7.3}_{-7.9}$  &$^{+7.5}_{-6.9}$   & {\small $\pm 0.2$} & $^{+2.6}_{-2.8}$ & $^{+0.1}_{-0.6}$ & {\small $\pm 3.4$} & $^{+1.5}_{-1.4}$ & {\small $\pm 3.5$} & $^{+3.9}_{-9.3}$  & {\small $\pm 7.8$} & $^{+9.0}_{-8.8}$ \\
+  \hline\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Experimental Uncertainties}
+The following sources of experimental systematic uncertainties on the expected
+signal yields have been considered:
+\begin{itemize}
+\item \textbf{Luminosity:}
+The uncertainty on the integrated luminosity for the 2011 data is 1.8\% 
+and $\pm 3.6\%$ in 2012 \cite{ATLAS:2012roa}.
+%
+\item \textbf{Acceptance of the kinematic requirements:}
+The total acceptance of \HToZg events is defined as the ratio of the total number
+of \HToZg events that pass all selections divided by the initial number of \HToZg
+events. The uncertainties related to the acceptance of the selection criteria are
+estimated using Monte Carlo simulations. This yields an uncertainty of 4\%.
+%
+\item \textbf{Photon identification efficiency:} 
+Recall that to have reliable comparison between data and theory one uses Monte Carlo
+simulation to generate events by computer randomly following a distribution predicted
+by theory. However, there are areas where simulation can not reproduce data exactly
+because there is no theory reproducing reality perfectly. In these areas on
+need to bring Monte Carlo simulations to the level of data by hand. This is done
+with the help of scale factors (SF) which are extracted from variables that are
+easy to analyze. One such quantity is the photon identification efficiency scale
+factor, which quantifies the discrepancy between data and MC when it comes to
+identifying photons in the ATLAS detector. At $\rts = 7 \TeV$, the signal
+yield is recomputing by varying the photon identification efficiency scale factors
+within their uncertainties and the relative variation is considered as a systematic
+uncertainty. At $\rts = 8 \TeV$ a conservative estimate of the uncertainty on the
+photon identification efficiency obtained from a comparison between data-driven
+measurements and the simulated efficiencies is used. This amounts to 2.5\% for
+$\et < 40 \GeV$ and for unconverted photons with $\abseta > 1.81$ and to 1.5\%
+otherwise. The resulting uncertainty on the \HToZg selection efficiency is below
+3\%.
+%
+\item \textbf{Photon and electron calorimeter isolation requirements:}
+The signal efficiency defined as $N_{\text{selected}}/N_{\text{truth}}$ 
+is measured from simulated events. 
+To estimate the systematic uncertainty due to the uncertainty
+on the efficiency of the isolation criteria, the signal efficiency is recomputed
+by shifting, in the simulation, the photon and electron calorimeter isolation
+energies by the average difference observed between data and Monte Carlo for
+photons and electrons, selected either in di-photon enriched events or
+in a control sample of electrons from $Z \to ee$. These difference are of the
+order of 100 MeV for the topological-cluster based isolation. The systematic
+uncertainty on the signal efficiency range between 0.2\% and 0.4\%.
+%
+\item \textbf{Photon and electron energy scales:}
+The energy of electromagnetic particles is measured by the electromagnetic 
+calorimeter essentially through a measurement of the amount light produced by
+the particle's interactions with the calorimeter's material. However, there
+are a number of effects that spoil the accuracy of the conversion of light into
+a particle's energy. The particles may punch through the calorimeter without leaving
+their energy inside, or they hit parts of the device which are uninstrumented or
+malfunctioning. Therefore, a correction to the energy measured in the 
+electromagnetic calorimeter is applied known as an energy scale factor, which
+rescales the measured energy to match the one the original particle had.
+
+The uncertainty from the electromagnetic (photon and electron) energy
+scales is assessed by varying the electromagnetic scale corrections (applied
+to the data) within their uncertainties. The effects of the uncertainty fomr
+the $Z \to ee$ calibration sample used to to extract the scale factors, of the
+limited knowledge of the material, of the uncertainty on the pre-sampler energy 
+scale and the low-$\pt$ scale factor uncertainties are evaluated. The total
+uncertainty on the signal efficiency is around 0.2\% for events in which
+the $Z$ boson candidate decays to muons and between 0.4\% and 1.2\% for
+events in which the $Z$ boson candidate decays to electrons.
+%
+\item \textbf{Photon and electron energy resolution:}
+The measurement of the electromagnetic energy only has a finite resolution.
+The uncertainty from this electromagnetic energy resolution is estimated by
+varying the resolution smearing corrections within its uncertainties and
+observing the relative variation in the predicted signal yield. The estimated
+uncertainty is smaller than 0.2\%.
+%
+\item \textbf{Electron trigger, reconstruction, and identification efficiency:}
+The electron trigger, reconstruction, and identification efficiency uncertainties
+are estimated by varying the efficiency scale factors applied to the simulation within
+their uncertainties. The total uncertainty, for events in which the $Z$ boson
+candidate decays to electrons, is around 3\%.
+%
+\item \textbf{Muon momentum scale and resolution:} 
+The uncertainty of the efficiency of the $\pt > 10 \GeV$ cut (15 GeV for muons
+tagged in the calorimeters) is estimated by varying the muon momentum
+corrections in MC by their uncertainties. The effect is around 0.1\%.
+%
+\item \textbf{Muon trigger, reconstruction, and identification efficiency:}
+The trigger, reconstruction, and identification muon efficiency uncertainties
+are estimated by varying the efficiency scale factors within their uncertainties.
+The total uncertainty, for events which $Z$ boson candidate decays to muons, is
+below 1\%.
+\end{itemize}
+Other sources of uncertainties have been estimated by comparing the efficiencies
+in data and Monte Carlo for control samples of leptons from $Z$ decays and found to
+be negligible. The total relative uncertainty in the signal efficiency is around 5\%.
+
+The following sources of experimental systematic uncertainties on the signal \dm
+distribution have been considered:
+\begin{itemize}
+\item \textbf{Photon and energy scales:}
+The signal \dm distribution is recomputed after varying the electromagnetic
+energy scale corrections within their uncertainties, and the shift of the
+peak position (0.2 GeV) is considered the systematic uncertainty.
+%
+\item \textbf{Photon and electron energy resolution:}
+The signal \dm distribution is recomputed after varying the electromagnetic
+smearing corrections within their uncertainties, and the relative variation of
+its width is taken as a systematic uncertainty. It amounts to 2-4\% for events
+in which the $Z$ boson candidate decays to muons and to 5\% for events in which the 
+$Z$ boson candidate decays to electrons.
+%
+\item \textbf{Muon momentum scale:}
+The signal \dm distribution is recomputed after varying the muon momentum scale
+within its uncertainties, and the shift of the peak position is considered
+as a systematic uncertainty. This uncertainty is found to be negligible.
+%
+\item \textbf{Muon momentum resolution:}
+The signal \dm distribution is recomputed after varying the muon momentum smearing
+corrections within their uncertainties, and the relative variation of its
+width (0-1.5\%) is taken as a systematic uncertainty.
+\end{itemize}
+
+The list of the main sources of systematic uncertainties and their contributions
+to the \HToZg expected signal yields and parameters of the signal \dm distributions
+are listed in Table~\ref{tab:zg_syst_125_8_7tev} for $m_H = 125 \GeV$ and
+$\rts = 8$ (7) TeV. The systematic uncertainties are profiled in the final
+maximum likelihood fit to the data, as described in \refS{subsec:nuisance}. All
+systematic uncertainties, except that on the luminosity, are treated as
+correlated between $\rts = 7 \TeV$ and the $\rts = 8 \TeV$ analyses.
+
+\begin{table}[!htbp]
+\centering
+\caption{Summary of the systematic uncertainties on the signal yield and
+  invariant mass distribution for $m_H = 125$ GeV, at $\sqrt{s}=8 (7)$ TeV.}
+  \label{tab:zg_syst_125_8_7tev} 
+\small
+ \begin{tabular}{cccc}
+       \hline
+       \hline
+       \textbf{Systematic Uncertainty }           & $H \rightarrow Z(ee) \gamma$(\%)   & $H \rightarrow Z(\mu\mu) \gamma$(\%) \\
+       \hline
+       \textbf{Signal Yield}                      &                                    &                                      \\ 
+       \hline
+       \multicolumn{1}{l}{Luminosity}                                 & 3.6 (1.8)                        & 3.6 (1.8)          \\
+       \multicolumn{1}{l}{Trigger efficiency}                         & 0.4 (0.2)                        & 0.8 (0.7)          \\
+       \multicolumn{1}{l}{Acceptance of kinematic selection}          & 4.0 (4.0)                        & 4.0 (4.0)          \\
+       \multicolumn{1}{l}{$\gamma$ identification efficiency}         & 2.9 (2.9)                        & 2.9 (2.9)          \\  
+       \multicolumn{1}{l}{electron reconstruction and identification efficiency} & 2.7 (3.0)             &                    \\  
+       \multicolumn{1}{l}{$\mu$ reconstruction and identification efficiency}    &                       & 0.6 (0.7)          \\  
+       \multicolumn{1}{l}{$e/\gamma$ energy scale}                    & 1.4 (0.3)                        & 0.3 (0.2)          \\
+%%       \multicolumn{1}{r}{Method uncertainty ($Z\to ee$)} & \multicolumn{1}{r}{1.4 (0.2)}   & \multicolumn{1}{r}{0.2 (0.1)} \\
+%%       \multicolumn{1}{r}{Material uncertainty}   & \multicolumn{1}{r}{0.1 (0.1)}    & \multicolumn{1}{r}{0.2 (0.1)}        \\
+%%       \multicolumn{1}{r}{Presampler energy scale}& \multicolumn{1}{r}{0.0 (0.1)}    & \multicolumn{1}{r}{0.0 (0.0)}        \\
+%%       \multicolumn{1}{r}{Low pt}                 & \multicolumn{1}{r}{0.2 (0.2)}    & \multicolumn{1}{r}{0.2 (0.1)}        \\
+       \multicolumn{1}{l}{$e/\gamma$ isolation}                       & 0.4 (0.3)                        & 0.4 (0.2)          \\  
+       \multicolumn{1}{l}{$e/\gamma$ energy resolution}               & 0.2 (0.2)                        & 0.0 (0.0)          \\
+       \multicolumn{1}{l}{$\mu$ momentum scale}                       &                                  & 0.1 (0.1)          \\  
+       \multicolumn{1}{l}{$\mu$ momentum resolution}                  &                                  & 0.0 (0.1)          \\
+       \hline
+       \textbf{Signal $\Delta m$ resolution}      &                                    &                                      \\  
+       \hline 
+       \multicolumn{1}{l}{$e/\gamma$ energy resolution}               & 5.0 (5.0)                        & 2.4 (2.4)          \\ 
+       \multicolumn{1}{l}{$\mu$ momentum resolution}                  &                                  & 0.0 (1.5)          \\
+       \hline
+       \textbf{Signal $\Delta m$ peak position} \\
+       \hline
+       \multicolumn{1}{l}{$e/\gamma$ energy scale}                    & 0.2 (0.2) GeV                    & 0.2 (0.2) GeV    \\
+       \multicolumn{1}{l}{$\mu$ momentum scale}                       &                                  & negligible         \\
+       \hline
+       \hline
+ \end{tabular}
+\end{table}

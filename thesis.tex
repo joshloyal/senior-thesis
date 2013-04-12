@@ -48,6 +48,11 @@
 % define some useful shortcuts
 \def\sec#1{$\mathrm{s}^{#1}$}
 \def\cm#1{$\mathrm{cm}^{#1}$}
+\def\average#1{\ensuremath{\langle#1\rangle}}
+\def\Nzg#1{\ensuremath{N_{#1}^{Z\gamma}}}
+\def\Nzj#1{\ensuremath{N_{#1}^{Z\text{jets}}}}
+\def\Nzjmc#1{\ensuremath{N_{#1}^{Z\text{jetsMC}}}}
+\def\New#1{\ensuremath{N_{#1}^{\text{EW$_{\text{bkg}}$}}}}
 \newcommand\fb{$\mathrm{fb}^{-1}$}
 \newcommand\Zgamma{$\ensuremath{Z\gamma}$\ }
 \newcommand\photon{$\ensuremath{\gamma}$\ }
@@ -61,6 +66,8 @@
 \def\vecth {\ensuremath{\boldmath \theta}}
 \newcommand\mll {\ensuremath{m_{\ell \ell}}\ }
 \newcommand\mllg{\ensuremath{m_{\ell \ell \gamma}}\ }
+\newcommand\pzero{\ensuremath{p_0}\ }
+\newcommand\qmu{\ensuremath{\tilde q_{\mu}}\ }
 \newcommand{\mbf}{\mathbf}
 \newcommand{\tabscript}[3]{%
  	\setlength{\fboxrule}{0pt}%
@@ -171,20 +178,15 @@ using data taken from the Large
 Hadron Collider (LHC) in Geneva, Switzerland. Now it is important to understand
 the various properties of the Higgs-like resonance using all of the available
 information provided by the ATLAS experiment. As such, a search for the Standard
-Model Higgs boson in the decay channel \HToZg, $Z\ra\ell^+\ell^-$, where
+Model Higgs boson in the decay channel \HToZg, $Z \ra \ll$, where
 $\ell = e$ or $\mu$, was conducted using proton-proton collisions recorded
 with the ATLAS detector at the LHC. The distribution of the difference \dm between 
 the final state three-body mass \mllg and the di-lepton invariant mass \mll
 is compared to Standard Model (SM) background expectations. No significant
 deviation from the SM prediciton is observed and upper limits on the 
 cross-section of a Standard Model Higgs boson with a mass between 120 and 150 GeV
-are derived. The expected exclusion limits at 95\% confidence level range between
-\excllowexp\ and \exclhighexp\ times the predicted Standard Model
-cross section.
-The observed exclusion limits range between \excllow\ and \exclhigh\
-times the Standard Model cross section.
-For a Higgs boson mass of 125 GeV, the expected and observed limits
-are \exclhiggsexp\ and \exclhiggs\ times the Standard Model, respectively.
+are derived. For a Higgs boson mass of 125 GeV, the observed upper limit
+is \exclhiggs\ times the Standard Model cross-section.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -192,39 +194,36 @@ are \exclhiggsexp\ and \exclhiggs\ times the Standard Model, respectively.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+ 
+ %% Some variable definitions
+ \input{definitions}
+ 
+ \tableofcontents
+ 
+ \newpage
+ 
+ \input{sec_intro}
+ \label{sec:intro}
+ 
+ \input{sec_theory}
+ 
+ \input{sec_exp}
+ 
+ \input{sec_event}
+ 
+ \input{sec_compare}
+ 
+ \input{sec_signal}
+ 
+ \input{sec_background}
+ 
+ \input{sec_sys}
+ 
+ \input{sec_results}
 
-%% Some variable definitions
-\input{definitions}
-
-\tableofcontents
-
-\newpage
-
-\input{sec_intro}
-\label{sec:intro}
-
-\input{sec_theory}
-
-\input{sec_exp}
-
-\input{sec_event}
-
-\input{sec_compare}
-\label{sec:compare}
-
-\input{sec_signal}
-\label{sec:signal}
-
-\input{sec_background}
-\label{sec:background}
-
-\input{sec_sys}
-\label{sec:sys}
-
-\input{sec_results}
-\label{sec:results}
-
-\bibliographystyle{atlasnote}
-\bibliography{biblio}
-
+ \input{sec_conclusion}
+ 
+ \bibliographystyle{atlasnote}
+ \bibliography{biblio}
+ 
 \end{document}

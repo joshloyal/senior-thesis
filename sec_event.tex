@@ -61,6 +61,214 @@ greater than 10 GeV. These filters retain roughly 3 - 4\% of the original events
 \footnote{See this wiki for more details 
 {\tt https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/RadiativeZDAODs}.}.
 
+\subsection{Monte Carlo Samples}
+\label{subsec:mc}
+In order to study the characteristics of both signal and background events 
+in the data, simulated data known as Monte Carlo samples\footnote{This name
+comes from the fact that the Monte Carlo integration method is used in generating
+these simulated samples.} are produced. These simulated samples are produced
+in the following three stages
+\[
+    \text{Parton level MC} \rightarrow \text{Shower MC} 
+    \rightarrow \text{Experimental Simulation}.
+\]
+Parton level Monte Carlo are responsible for producing the hard scattering process
+of interest, e.g. the parton-parton collision that produces a SM 
+Higgs boson decaying to $Z\gamma$, followed by a decay of the $Z$ to 
+a charged lepton pair. The shower Monte Carlo takes
+any remaining quarks/gluons in the parton level MC and goes 
+through a process of showering (QCD radiation in the form of gluons) and
+hadronization to produce particle jets. Finally, the interaction of the resulting
+particles with the detector materials is modeled with GEANT4 \cite{geant} and
+the detector response is simulated. More details on the ATLAS event generation and
+simulation infrastructure are provided in \cite{ATLASsimulation}.
+
+The main backgrounds in this search originate from $Z+\gamma$ events either
+from di-boson production with initial-state radiation (ISR)
+in which a $q\bar q$ pair annihilate to form a $Z$ boson and one of the 
+quarks radiate a photon ($q\bar q \to Z\gamma$), 
+from final-state-radiate (FSR) in radiative $Z$ boson decays 
+($Z \to \ell\ell\gamma$). or from parton-to-photon fragmentation, and production
+of a $Z$ boson in association with a jet, and misidentification of a particle
+jet as a photon. There is also a smaller contribution from  $t\bar t$ and $WZ$
+events.
+
+The various signal and background Monte Carlo samples used in the 2012 (2011) 
+analysis are presented in \refT{tab:MCsamples_8TeV} (\ref{tab:MCsamples_7TeV}).
+
+% created with maketableMClumifornote.sh
+\begin{sidewaystable}[!htbp]
+  \begin{center}
+    \caption{Simulated samples at $\sqrt{s}=7$ TeV. The number of events listed in the
+      second column is either the number of events in the D3PD (for unskimmed samples)
+      or of events in the AOD before skimming (for skimmed samples).
+      The cross sections for the signals are from Ref.~\cite{LHCHiggsCrossSectionWorkingGroup:2011ti}, 
+    while for background samples the cross sections are those returned by the MC generators.
+      The equivalent luminosity is computed as $N_{\rm evts}/(\sigma_{\rm gen}\varepsilon_{\rm filt})$.}
+    \label{tab:MCsamples_7TeV}
+    \tiny
+       \begin{tabular}{ccccc}
+         \hline
+         \hline
+         D3PD name &           Events  &    $\sigma_{\rm gen}$ & $\varepsilon_{\rm filt}$ & eq. lumi \\
+                   &                   &    [nb]              &                        &  [nb$^{-1}$]   \\
+         \hline
+         \multicolumn{5}{c}{$H\to Z\gamma$ signal} \\
+         \hline
+%% Numbers with xsection from Yellow book
+%% OLD MC
+%% mc11\_7TeV.167520.PowHegPythia\_ggH120\_Zllgam.merge.NTUP\_PHOTON.e1465\_s1372\_s1370\_r3108\_r3109\_p1333  & 100000 & 1.866e-06 & 1 & 5.359e+10 \\
+%% mc11\_7TeV.167521.PowHegPythia\_ggH125\_Zllgam.merge.NTUP\_PHOTON.e1465\_s1372\_s1370\_r3108\_r3109\_p1333  & 100000 & 2.382e-06 & 1 & 4.198e+10 \\
+%% mc11\_7TeV.167522.PowHegPythia\_ggH130\_Zllgam.merge.NTUP\_PHOTON.e1465\_s1372\_s1370\_r3108\_r3109\_p1333  &  99999 & 2.788e-06 & 1 & 3.587e+10 \\
+%% mc11\_7TeV.167530.PowHegPythia\_VBFH120\_Zllgam.merge.NTUP\_PHOTON.e1465\_s1372\_s1370\_r3108\_r3109\_p1333 &  49999 & 1.435e-07 & 1 & 3.484e+11 \\
+%% mc11\_7TeV.167531.PowHegPythia\_VBFH125\_Zllgam.merge.NTUP\_PHOTON.e1465\_s1372\_s1370\_r3108\_r3109\_p1333 &  50000 & 1.897e-07 & 1 & 2.636e+11 \\
+%% mc11\_7TeV.167532.PowHegPythia\_VBFH130\_Zllgam.merge.NTUP\_PHOTON.e1465\_s1372\_s1370\_r3108\_r3109\_p1333 &  50000 & 2.304e-07 & 1 & 2.170e+11 \\
+%% NEW MC
+%% mc11\_7TeV.167483.PowhegPythia8\_AU2CT10\_ggH115\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & & 1 & \\
+mc11\_7TeV.167480.PowhegPythia8\_AU2CT10\_ggH120\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & 1.866e-06 & 1 & 5.359e+10 \\
+mc11\_7TeV.167481.PowhegPythia8\_AU2CT10\_ggH125\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & 2.382e-06 & 1 & 4.198e+10 \\
+mc11\_7TeV.167482.PowhegPythia8\_AU2CT10\_ggH130\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 &  99999 & 2.788e-06 & 1 & 3.587e+10 \\
+mc11\_7TeV.167484.PowhegPythia8\_AU2CT10\_ggH135\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 &  99999 & 3.005e-06 & 1 & 3.328e+10 \\
+mc11\_7TeV.167485.PowhegPythia8\_AU2CT10\_ggH140\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 &  99999 & 2.374e-06 & 1 & 4.212e+10 \\
+mc11\_7TeV.167486.PowhegPythia8\_AU2CT10\_ggH145\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 &  70000 & 1.922e-06 & 1 & 3.642e+10 \\
+mc11\_7TeV.167487.PowhegPythia8\_AU2CT10\_ggH150\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 &  99999 & 1.464e-06 & 1 & 6.831e+10 \\
+%% mc11\_7TeV.167493.PowhegPythia8\_AU2CT10\_VBFH115\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & & 1 & \\
+mc11\_7TeV.167490.PowhegPythia8\_AU2CT10\_VBFH120\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & 1.433e-07 & 1 & 6.978e+11 \\ 
+mc11\_7TeV.167491.PowhegPythia8\_AU2CT10\_VBFH125\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & 1.900e-07 & 1 & 5.263e+11 \\ 
+mc11\_7TeV.167492.PowhegPythia8\_AU2CT10\_VBFH130\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & 2.300e-07 & 1 & 4.348e+11 \\ 
+mc11\_7TeV.167494.PowhegPythia8\_AU2CT10\_VBFH135\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & 2.560e-07 & 1 & 3.906e+11\\ 
+mc11\_7TeV.167495.PowhegPythia8\_AU2CT10\_VBFH140\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 &  99899 & 2.083e-07 & 1 & 4.796e+11\\ 
+mc11\_7TeV.167496.PowhegPythia8\_AU2CT10\_VBFH145\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & 1.735e-07 & 1 & 5.764e+11\\ 
+mc11\_7TeV.167497.PowhegPythia8\_AU2CT10\_VBFH150\_Zllgam.merge.NTUP\_PHOTON.e1749\_s1570\_s1571\_r3108\_r3109\_p1373 & 100000 & 1.356e-07 & 1 & 7.375e+11\\ 
+         \hline
+         \multicolumn{5}{c}{$Z\to \ell\ell\gamma$ background} \\
+         \hline
+mc11\_7TeV.145161.Sherpa\_Zeegamma\_3jets.merge.NTUP\_PHOTON.e1443\_s1372\_s1370\_r3108\_r3109\_p1373 & 399799 & 0.027344 & 1 & 1.46211e+07 \\
+mc11\_7TeV.145162.Sherpa\_Zmumugamma\_3jets.merge.NTUP\_PHOTON.e1443\_s1372\_s1370\_r3108\_r3109\_p1373 & 399800 & 0.027301 & 1 & 1.46442e+07 \\
+         \hline
+         \multicolumn{5}{c}{$Z(\to \ell\ell) + jets$ background} \\
+         \hline
+mc11\_7TeV.147771.Sherpa\_CT10\_Zmumu.merge.NTUP\_PHOTON.e1443\_s1372\_s1370\_r3108\_r3109\_p1373      & 9995488 & 1.0452     & 1 & 9.56323e+06 \\
+mc11\_7TeV.107650.AlpgenJimmyZeeNp0\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373   & 6618284 & 0.6696     & 1 & 9.88394e+06 \\
+mc11\_7TeV.107651.AlpgenJimmyZeeNp1\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373   & 1334897 & 0.13452    & 1 & 9.92341e+06 \\
+mc11\_7TeV.107652.AlpgenJimmyZeeNp2\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373   & 2004195 & 0.040706   & 1 & 4.92359e+07 \\
+mc11\_7TeV.107653.AlpgenJimmyZeeNp3\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373   & 549949  & 0.011262   & 1 & 4.88323e+07 \\
+mc11\_7TeV.107654.AlpgenJimmyZeeNp4\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373   & 149948  & 0.0028447  & 1 & 5.27114e+07 \\
+mc11\_7TeV.107655.AlpgenJimmyZeeNp5\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373   & 50000   & 0.00075691 & 1 & 6.60581e+07 \\
+mc11\_7TeV.147770.Sherpa\_CT10\_Zee.merge.NTUP\_PHOTON.e1443\_s1372\_s1370\_r3108\_r3109\_p1373        & 9998665 & 1.0458     & 1 & 9.56078e+06 \\
+mc11\_7TeV.107660.AlpgenJimmyZmumuNp0\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373 & 6615230 & 0.66956    & 1 & 9.87997e+06 \\
+mc11\_7TeV.107661.AlpgenJimmyZmumuNp1\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373 & 1334296 & 0.13455    & 1 & 9.91673e+06 \\
+mc11\_7TeV.107662.AlpgenJimmyZmumuNp2\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373 & 1999941 & 0.040642   & 1 & 4.92087e+07 \\
+mc11\_7TeV.107663.AlpgenJimmyZmumuNp3\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373 & 549896  & 0.011279   & 1 & 4.8754e+07 \\
+mc11\_7TeV.107664.AlpgenJimmyZmumuNp4\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373 & 150000  & 0.002837   & 1 & 5.28728e+07 \\
+mc11\_7TeV.107665.AlpgenJimmyZmumuNp5\_pt20.merge.NTUP\_PHOTON.e835\_s1299\_s1300\_r3043\_r2993\_p1373 & 50000   & 0.00076123 & 1 & 6.56832e+07 \\
+         \hline
+         \multicolumn{5}{c}{$t\bar{t}$ background} \\
+         \hline
+mc11\_7TeV.109345.T1\_McAtNlo\_Jimmy\_2LeptonsMll60GeV.merge.NTUP\_PHOTON.e961\_s1310\_s1300\_r3043\_r2993\_p1373 & 499948 & 0.14519 & 0.081719 & 4.21371e+07 \\
+mc11\_7TeV.109345.T1\_McAtNlo\_Jimmy\_2LeptonsMll60GeV.merge.NTUP\_PHOTON.e961\_s1310\_s1300\_r3043\_r2993\_p1373 & 499948 & 0.14519 & 0.081719 & 4.21371e+07 \\
+         \hline
+         \multicolumn{5}{c}{$WZ$ background} \\
+         \hline
+mc11\_7TeV.128811.SherpaWZlllnu.merge.NTUP\_PHOTON.e950\_s1310\_s1300\_r3043\_r2993\_p1373 & 299950 & 0.00036164 & 1 & 8.29416e+08 \\
+mc11\_7TeV.128811.SherpaWZlllnu.merge.NTUP\_PHOTON.e950\_s1310\_s1300\_r3043\_r2993\_p1373 & 299950 & 0.00036164 & 1 & 8.29416e+08 \\
+         \hline\hline
+       \end{tabular}
+  \end{center}
+\end{sidewaystable}
+
+% created with maketableMClumifornote.sh
+\begin{sidewaystable}[!htbp]
+  \begin{center}
+    \caption{Simulated samples at $\sqrt{s}=8$ TeV. The number of events listed in the
+      second column is either the number of events in the D3PD (for unskimmed samples)
+      or of events in the AOD before skimming (for skimmed samples).
+      The cross sections for the signals are from Ref.~\cite{LHCHiggsCrossSectionWorkingGroup:2012vm},
+    while for background samples the cross sections are those returned by the MC generators.
+      The equivalent luminosity is computed as $N_{\rm evts}/(\sigma_{\rm gen}\varepsilon_{\rm filt})$.}
+    \label{tab:MCsamples_8TeV}
+    \tiny
+       \begin{tabular}{ccccc}
+         \hline
+         \hline
+         D3PD name &           Events  &    $\sigma_{\rm gen}$ & $\varepsilon_{\rm filt}$ & eq. lumi \\
+                   &                   &    [nb]              &                        &  [nb$^{-1}$]   \\
+         \hline
+         \multicolumn{5}{c}{$H\to Z\gamma$ signal} \\
+         \hline
+%% Numbers with xsection from Yellow book
+%% OLD MC
+%%         mc12\_8TeV.167480.PowhegPythia8\_AU2CT10\_ggH120\_Zllgam.merge.NTUP\_PHOTON.e1464\_s1499\_s1504\_r3658\_r3549\_p1211 & 100000 & 2.368e-06 & 1 & 4.223e+10 \\
+%%         mc12\_8TeV.167481.PowhegPythia8\_AU2CT10\_ggH125\_Zllgam.merge.NTUP\_PHOTON.e1464\_s1499\_s1504\_r3658\_r3549\_p1211 & 100000 & 3.036e-06 & 1 & 3.294e+10 \\
+%%         mc12\_8TeV.167482.PowhegPythia8\_AU2CT10\_ggH130\_Zllgam.merge.NTUP\_PHOTON.e1464\_s1499\_s1504\_r3658\_r3549\_p1211 & 100000 & 3.558e-06 & 1 & 2.811e+10 \\
+%%         mc12\_8TeV.167490.PowhegPythia8\_AU2CT10\_VBFH120\_Zllgam.merge.NTUP\_PHOTON.e1464\_s1499\_s1504\_r3658\_r3549\_p1211 & 39999 & 1.849e-07 & 1 & 2.163e+11 \\
+%%         mc12\_8TeV.167491.PowhegPythia8\_AU2CT10\_VBFH125\_Zllgam.merge.NTUP\_PHOTON.e1464\_s1499\_s1504\_r3658\_r3549\_p1211 & 49900 & 2.457e-07 & 1 & 2.031e+11 \\
+%%         mc12\_8TeV.167492.PowhegPythia8\_AU2CT10\_VBFH130\_Zllgam.merge.NTUP\_PHOTON.e1464\_s1499\_s1504\_r3658\_r3549\_p1211 & 50000 & 2.973e-07 & 1 & 1.682e+11 \\
+
+%% NEW MC
+%%mc12\_8TeV.167483.PowhegPythia8\_AU2CT10\_ggH115\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &      0 & & 1 & \\
+mc12\_8TeV.167480.PowhegPythia8\_AU2CT10\_ggH120\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 & 100000 & 2.368e-06 & 1 & 4.223e+10 \\
+mc12\_8TeV.167481.PowhegPythia8\_AU2CT10\_ggH125\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  99999 & 3.035e-06 & 1 & 3.294e+10 \\
+mc12\_8TeV.167482.PowhegPythia8\_AU2CT10\_ggH130\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  99999 & 3.558e-06 & 1 & 2.811e+10 \\
+mc12\_8TeV.167484.PowhegPythia8\_AU2CT10\_ggH135\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  99999 & 3.848e-06 & 1 & 2.599e+10 \\
+mc12\_8TeV.167485.PowhegPythia8\_AU2CT10\_ggH140\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  99998 & 3.046e-06 & 1 & 3.283e+10 \\
+mc12\_8TeV.167486.PowhegPythia8\_AU2CT10\_ggH145\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 & 100000 & 2.475e-06 & 1 & 4.040e+10 \\
+mc12\_8TeV.167487.PowhegPythia8\_AU2CT10\_ggH150\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  89999 & 1.888e-06 & 1 & 4.767e+10 \\
+%%mc12\_8TeV.167493.PowhegPythia8\_AU2CT10\_VBFH115\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &      0 & & 1 & \\
+mc12\_8TeV.167490.PowhegPythia8\_AU2CT10\_VBFH120\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  79999 & 1.848e-07 & 1 & 4.329e+11 \\
+mc12\_8TeV.167491.PowhegPythia8\_AU2CT10\_VBFH125\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  99900 & 2.454e-07 & 1 & 4.071e+11 \\
+mc12\_8TeV.167492.PowhegPythia8\_AU2CT10\_VBFH130\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  99999 & 2.975e-07 & 1 & 3.361e+11 \\
+mc12\_8TeV.167494.PowhegPythia8\_AU2CT10\_VBFH135\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 & 100000 & 3.319e-07 & 1 & 3.013e+11 \\
+mc12\_8TeV.167495.PowhegPythia8\_AU2CT10\_VBFH140\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  99997 & 2.707e-07 & 1 & 3.694e+11 \\
+mc12\_8TeV.167496.PowhegPythia8\_AU2CT10\_VBFH145\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  99500 & 2.261e-07 & 1 & 4.401e+11 \\
+mc12\_8TeV.167497.PowhegPythia8\_AU2CT10\_VBFH150\_Zllgam.merge.NTUP\_PHOTON.e1746\_s1581\_s1586\_r3658\_r3549\_p1344 &  79999 & 1.771e-07 & 1 & 4.517e+11 \\
+%%
+         mc12\_8TeV.167674.MCFMPythia8\_AU2CTEQ6L1\_ggH120\_Zgamma\_ee.merge.NTUP\_PHOTON.e1619\_s1581\_s1586\_r3658\_r3549\_p1211   & 100000 & 7.893e-07 & 1 & 1.267e+11 \\
+         mc12\_8TeV.167675.MCFMPythia8\_AU2CTEQ6L1\_ggH125\_Zgamma\_ee.merge.NTUP\_PHOTON.e1619\_s1581\_s1586\_r3658\_r3549\_p1211   & 100000 & 1.012e-06 & 1 & 9.881e+10 \\
+         mc12\_8TeV.167676.MCFMPythia8\_AU2CTEQ6L1\_ggH130\_Zgamma\_ee.merge.NTUP\_PHOTON.e1619\_s1581\_s1586\_r3658\_r3549\_p1211   & 100000 & 1.186e-06 & 1 & 8.432e+10 \\
+         mc12\_8TeV.167622.MCFMPythia8\_AU2CTEQ6L1\_ggH120\_Zgamma\_mumu.merge.NTUP\_PHOTON.e1619\_s1581\_s1586\_r3658\_r3549\_p1211 & 100000 & 7.893e-07 & 1 & 1.267e+11 \\
+         mc12\_8TeV.167623.MCFMPythia8\_AU2CTEQ6L1\_ggH125\_Zgamma\_mumu.merge.NTUP\_PHOTON.e1619\_s1581\_s1586\_r3658\_r3549\_p1211 & 100000 & 1.012e-06 & 1 & 9.881e+10 \\
+         mc12\_8TeV.167624.MCFMPythia8\_AU2CTEQ6L1\_ggH130\_Zgamma\_mumu.merge.NTUP\_PHOTON.e1619\_s1581\_s1586\_r3658\_r3549\_p1211 & 100000 & 1.186e-06 & 1 & 8.432e+10 \\
+         \hline
+         \multicolumn{5}{c}{$Z\to \ell\ell\gamma$ background} \\
+         \hline
+         mc12\_8TeV.145161.Sherpa\_CT10\_eegammaPt10.merge.NTUP\_PHOTON.e1434\_s1499\_s1504\_r3658\_r3549\_p1211 & 1184995 & 0.032261 & 1 & 3.67315e+07 \\
+         mc12\_8TeV.145162.Sherpa\_CT10\_mumugammaPt10.merge.NTUP\_PHOTON.e1434\_s1499\_s1504\_r3658\_r3549\_p1211 & 1199997 & 0.032317 & 1 & 3.71321e+07 \\
+% I think we do not use anywhere...       
+%         mc12\_8TeV.129250.PowhegPythia8\_AU2CT10\_Zee\_2Lepton1Photon.merge.NTUP\_PHOTON.e1444\_s1499\_s1504\_r3658\_r3549\_p1208\_p1210 & 4999981 & 1.1099 & 0.039685 & 1.13516e+08 \\
+%         mc12\_8TeV.129251.PowhegPythia8\_AU2CT10\_Zmumu\_2Lepton1Photon.merge.NTUP\_PHOTON.e1444\_s1499\_s1504\_r3658\_r3549\_p1208\_p1210 & 0 & 1.1099 & 0.02202 & 0 \\
+         \hline
+         \multicolumn{5}{c}{$Z(\to \ell\ell) + jets$ background} \\
+         \hline
+         mc12\_8TeV.147770.Sherpa\_CT10\_Zee.merge.NTUP\_PHOTON.e1161\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 9999568 & 1.2079 & 1 & 8.27847e+06 \\
+         mc12\_8TeV.107650.AlpgenJimmy\_AUET2CTEQ6L1\_ZeeNp0.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 6604283 & 0.71177 & 1 & 9.27868e+06 \\
+         mc12\_8TeV.107651.AlpgenJimmy\_AUET2CTEQ6L1\_ZeeNp1.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 1329994 & 0.15517 & 1 & 8.57121e+06 \\
+         mc12\_8TeV.107652.AlpgenJimmy\_AUET2CTEQ6L1\_ZeeNp2.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 404798 & 0.048745 & 1 & 8.3044e+06 \\
+         mc12\_8TeV.107653.AlpgenJimmy\_AUET2CTEQ6L1\_ZeeNp3.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 109998 & 0.014225 & 1 & 7.73272e+06 \\
+         mc12\_8TeV.107654.AlpgenJimmy\_AUET2CTEQ6L1\_ZeeNp4.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 30000 & 0.0037595 & 1 & 7.97978e+06 \\
+         mc12\_8TeV.107655.AlpgenJimmy\_AUET2CTEQ6L1\_ZeeNp5.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 10000 & 0.0010945 & 1 & 9.13659e+06 \\
+         mc12\_8TeV.147771.Sherpa\_CT10\_Zmumu.merge.NTUP\_PHOTON.e1161\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 9999975 & 1.2078 & 1 & 8.2795e+06 \\
+         mc12\_8TeV.107660.AlpgenJimmy\_AUET2CTEQ6L1\_ZmumuNp0.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 6609982 & 0.71211 & 1 & 9.28225e+06 \\
+         mc12\_8TeV.107661.AlpgenJimmy\_AUET2CTEQ6L1\_ZmumuNp1.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 1334897 & 0.15477 & 1 & 8.62504e+06 \\
+         mc12\_8TeV.107662.AlpgenJimmy\_AUET2CTEQ6L1\_ZmumuNp2.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 404897 & 0.048912 & 1 & 8.27807e+06 \\
+         mc12\_8TeV.107663.AlpgenJimmy\_AUET2CTEQ6L1\_ZmumuNp3.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 110000 & 0.014226 & 1 & 7.73232e+06 \\
+         mc12\_8TeV.107664.AlpgenJimmy\_AUET2CTEQ6L1\_ZmumuNp4.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 29999 & 0.0037838 & 1 & 7.92827e+06 \\
+         mc12\_8TeV.107665.AlpgenJimmy\_AUET2CTEQ6L1\_ZmumuNp5.merge.NTUP\_PHOTON.e1218\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 10000 & 0.0011148 & 1 & 8.97022e+06 \\
+         \hline
+         \multicolumn{5}{c}{$t\bar{t}$ background} \\
+         \hline
+         mc12\_8TeV.110001.McAtNloJimmy\_CT10\_ttbar\_dilepton.merge.NTUP\_PHOTON.e1193\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 7694555 & 0.02181 & 1 & 3.528e+08 \\
+         mc12\_8TeV.110001.McAtNloJimmy\_CT10\_ttbar\_dilepton.merge.NTUP\_PHOTON.e1193\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 7694555 & 0.02181 & 1 & 3.528e+08 \\
+         \hline
+         \multicolumn{5}{c}{$WZ$ background} \\
+         \hline
+         mc12\_8TeV.129486.PowhegPythia8\_AU2CT10\_WZ\_W11Z11\_mll0p250d0\_2LeptonFilter5.merge.NTUP\_PHOTON.e1300\_s1469\_s1470\_r3542\_r3549\_p1208\_p1210 & 189899 & 0.0009795 & 0.29694 & 6.52904e+08 \\
+         mc12\_8TeV.129487.PowhegPythia8\_AU2CT10\_WZ\_W11Z13\_mll0p4614d0\_2LeptonFilter5.merge.NTUP\_PHOTON.e1300\_s1469\_s1470\_r3542\_r3549\_p1208\_p1256 & 190000 & 0.000639 & 0.35302 & 8.42274e+08 \\
+         \hline\hline
+       \end{tabular}
+  \end{center}
+\end{sidewaystable}
+
 \subsection{Primary Vertex Definition}
 Events that pass the selection described below always have at least one
 reconstructed primary vertex. These primary vertices are determined from fits
@@ -70,8 +278,9 @@ and gluons that make up the protons in the beams. These QCD processes are
 classified as hard or soft depending on the amount of momentum transferred 
 between the interacting particles. Of the roughly 20 proton-proton interactions
 that occur during each bunch crossing, almost all of them are soft QCD processes.
-This means there is very low momentum transfer and they mostly consist of glancing 
-collisions between the quarks. However, the QCD process that produces a Higgs boson 
+This means there is very low momentum transfer in the collision, 
+so mostly consist of glancing collisions between the quarks. 
+However, the QCD process that produces a Higgs boson 
 (gluon-gluon fusion) is a hard interaction with high momentum transfer.
 In order to ensure that the primary vertex originated from the original hard 
 interaction, the vertex is chosen with the largest sum of the 
@@ -139,42 +348,44 @@ the highest purity: combined and stand-alone muons are required to have $|\eta| 
 , and stand-alone muons are required to have $2.5 < |\eta| < 2.7$. The inner
 detector tracks associated to muons that are identified inside the ID acceptance are
 required to have a minimum number of associated hits in each of the ID sub-detectors
-(to ensure good track reconstruction). A summary of the inner-detector hit 
-requirements is summarized in \refT{tab:muonidhits}. In addition, the inner
+(to ensure good track reconstruction). 
+%A summary of the inner-detector hit 
+%requirements is summarized in \refT{tab:muonidhits}. 
+In addition, the inner
 detector tracks are required to have transverse (longitudinal) impact parameter
 $d_0$ ($z_0$) with respect to the primary vertex, smaller than 1 mm (10 mm).
 
-\begin{table}[hbt]
-   \centering
-   \begin{tabular}{cc}
-      \hline
-      \hline
-      \multicolumn{2}{c}{2012} \\
-      \hline
-      ID Si hit requirement & expectBLayerHit=false or numberOfBLayerHits $\geq$ 1 \\
-                            & No. of pixel hits $+$ No. of crossed dead pixel sensors $ > $ 0 \\
-                            & No. of SCT hits $+$ No. of crossed dead SCT sensors $ > $ 4 \\
-                            & No. of pixel holes $+$ No. of SCT holes $ < $ 3 \\
-      TRT hit requirements: $0.1 < |\eta|\le1.9$& Hits + Outliers $>$ 5 \& $\frac{\rm{Outliers}}{\rm{Hits + outliers}}<0.9 $\\
-TRT hit requirements: $|\eta| < 0.1 $ or $|\eta|\geq1.9$ & if (Hits + Outliers $>$ 5):  $\frac{\rm{Outliers}}{\rm{Hits + outliers}} <0.9 $\\
-\hline
-\hline
-      \multicolumn{2}{c}{2011} \\
-      \hline
-      ID Si hit requirement & expectBLayerHit=false or numberOfBLayerHits $\geq$ 1 \\
-                            & No. of pixel hits $+$ No. of crossed dead pixel sensors $ > $ 1 \\
-                            & No. of SCT hits $+$ No. of crossed dead SCT sensors $ > $ 5 \\
-                            & No. of pixel holes $+$ No. of SCT holes $ < $ 3 \\
-      TRT hit requirements: $|\eta|<1.9$& Hits + Outliers $>$ 5 \& $\frac{\rm{Outliers}}{\rm{Hits + outliers}}<0.9 $\\
-TRT hit requirements: $|\eta|\geq1.9$ & if (Hits + Outliers $>$ 5):  $\frac{\rm{Outliers}}{\rm{Hits + outliers}} <0.9 $\\
-\hline
-\hline
-  \end{tabular}
-   \caption{List of Inner Detector hit requirements for the muon
-     tracks reconstructed in the ID.\label{tab:IDhits}}
-   \label{tab:muonidhits}
-\end{table}
-
+% \begin{table}[hbt]
+%    \centering
+%    \begin{tabular}{cc}
+%       \hline
+%       \hline
+%       \multicolumn{2}{c}{2012} \\
+%       \hline
+%       ID Si hit requirement & expectBLayerHit=false or numberOfBLayerHits $\geq$ 1 \\
+%                             & No. of pixel hits $+$ No. of crossed dead pixel sensors $ > $ 0 \\
+%                             & No. of SCT hits $+$ No. of crossed dead SCT sensors $ > $ 4 \\
+%                             & No. of pixel holes $+$ No. of SCT holes $ < $ 3 \\
+%       TRT hit requirements: $0.1 < |\eta|\le1.9$& Hits + Outliers $>$ 5 \& $\frac{\rm{Outliers}}{\rm{Hits + outliers}}<0.9 $\\
+% TRT hit requirements: $|\eta| < 0.1 $ or $|\eta|\geq1.9$ & if (Hits + Outliers $>$ 5):  $\frac{\rm{Outliers}}{\rm{Hits + outliers}} <0.9 $\\
+% \hline
+% \hline
+%       \multicolumn{2}{c}{2011} \\
+%       \hline
+%       ID Si hit requirement & expectBLayerHit=false or numberOfBLayerHits $\geq$ 1 \\
+%                             & No. of pixel hits $+$ No. of crossed dead pixel sensors $ > $ 1 \\
+%                             & No. of SCT hits $+$ No. of crossed dead SCT sensors $ > $ 5 \\
+%                             & No. of pixel holes $+$ No. of SCT holes $ < $ 3 \\
+%       TRT hit requirements: $|\eta|<1.9$& Hits + Outliers $>$ 5 \& $\frac{\rm{Outliers}}{\rm{Hits + outliers}}<0.9 $\\
+% TRT hit requirements: $|\eta|\geq1.9$ & if (Hits + Outliers $>$ 5):  $\frac{\rm{Outliers}}{\rm{Hits + outliers}} <0.9 $\\
+% \hline
+% \hline
+%   \end{tabular}
+%    \caption{List of Inner Detector hit requirements for the muon
+%      tracks reconstructed in the ID.\label{tab:IDhits}}
+%    \label{tab:muonidhits}
+% \end{table}
+ 
 \subsubsection*{Electron and Photon Reconstruction}
 The electron and photon reconstruction are seeded from clusters of energy deposited
 in the electromagnetic calorimeter. The reconstruction is designed to separate 
@@ -252,5 +463,64 @@ discarded, otherwise the muon candidate is rejected. Photon candidates that are
 within $\Delta R < 0.3$ of a selected electron or muon candidate are also rejected,
 thus suppressing background from final state radiation (FSR) $Z+\gamma$ events.
 
-\subsection{$Z(\ell\ell)$ Reconstruction and Selection}
+\subsection{$Z(\ll)$ Reconstruction and Selection}
+$Z$ boson candidates are reconstructed from paris of same-flavor, opposite-sign
+leptons passing the previous selections. Muon pairs are required to have no more
+than one muon identified either without the muon spectrometer or in the region
+outside the ID acceptance (one combined muon is required). In the case of
+multiple $Z$ candidates in the same event, the candidate with the invariant
+mass closest to the Z boson's mass ($m_Z = 91.2$ \cite{Beringer:1900zz}) is selected.
+The leptons used in the reconstruction of the selected $Z$ boson candidate are also
+required to match the trigger object(s) of the (single or double) lepton trigger
+used to select the event. Finally, an invariant mass requirement $\mass\ell > 65 \GeV$
+is applied in order to remove biases in the simulated $Z$+jet samples which have a 
+generator-level di-lepton invariant mass cut with lower threshold.
+
 \subsection{$H(Z\gamma)$ Reconstruction and Selection}
+Higgs boson candidates are reconstructed from the combination of the $Z$ candidate
+with invariant mass close to the $Z$ mass and the photons with the largest transverse
+energy. Track and calorimeter isolation requirements are applied to the leptons
+forming the Higgs boson candidate. The normalized track isolation is defined as the 
+sum of the transverse momenta of tracks, $\sum \pt$ inside a cone of $\Delta R < 0.2$
+around the lepton, excluding the lepton track, divided by the lepton \pt. Each lepton
+is required to have a normalized track isolation smaller than 0.15. The normalized
+calorimetric isolation for electrons, computed as the sum of the positive-energy
+topological clusters with a reconstructed barycenter falling in a cone of
+$\Delta R < 0.2$ around the candidate electron cluster divided by the electron \et,
+must be lower than 0.2. The cells with $0.125 \times 0.175$ in $\eta \times \phi$
+around the electron barycenter are excluded. The calorimetric isolation 
+$E_{\text{T}}^{\text{cone}}$ for muons is computed from the sum of the transverse
+energy of the calorimeter cells inside a cone of $\Delta R < 0.2$ around the muon
+direction. The transverse energy of the cells inside a predefined region
+around the points where the muon track crosses the different layers of the
+calorimeter and accounts for the muon energy loss itself is subtracted. Muons
+are required to have a normalized calorimetric isolation 
+$E_{\text{T}}^{\text{cone}}/\pt$ less than 0.3 (0.15 in the case of muons without an
+ID track). For both the track and calorimeter based isolation any contributions
+arising from the other lepton from the candidate $Z$ decay are subtracted.
+Additional track impact significance selections are also applied to the leptons
+from the $Z$ candidate decay. The transverse impact parameter significance 
+$|d_0|/\sigma_{d_0}$ of the ID track associated to leptons within the acceptance of
+the inner detector is required to be less than 3.5 and 6.5 for muons and electrons,
+respectively. The electron impact parameter is affected by bremsstrahlung and it
+thus has a broader distribution. The isolation criteria, as well as the impact
+significance selections applied in this analysis, have been optimized in the search
+for the SM Higgs boson in the $H \to ZZ^* \to 4\ell$ channel 
+\cite{ATLAS-CONF-2012-169}.
+
+Finally, to suppress events from FSR $Z \to \ell\ell\gamma$, the di-lepton
+invariant mass is required to be larger than the PDG value of the $Z$ boson mass
+minus 10 GeV. This requirement also reduces the contribution to the signal
+from internal photon conversions in $H \to \gamma\gamma$ to a negligible level 
+\cite{Firan:1032388}.
+
+The same reconstruction algorithms and selection criteria are used for
+simulated events. The simulation is corrected to take into account known data-MC
+differences on photon and lepton efficiencies and energy or momentum resolution.
+
+After applying all selection criteria, the number of \HToZg candidates in the
+$\rts = 8 \TeV$ ($\rts = 7 \TeV$) data sample is 13978 (1927) in the 
+$Z \to ee\gamma$ channel and 16678 (2621) in the $Z \to \mu\mu\gamma$
+channel. The larger number of events in the muon channel in data (and simulation)
+is due to the larger acceptance of the muon spectrometer (up to $|\eta| = 2.7$)
+and the higher selection efficiency for muons than the electrons.
