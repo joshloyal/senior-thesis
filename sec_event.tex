@@ -12,7 +12,7 @@ electrons, and photons from the crude information provided by the ATLAS detector
 are outlined. Finally, the criteria used to interpolate back to the $Z$ and 
 Higgs bosons is summarized. 
 
-\subsection{Data Samples}
+\subsection{Data samples}
 To ensure that the analyzed data is of high quality, events in which the ATLAS
 detector is not fully operational, or shows data quality problems are excluded.
 The resulting integrated luminosity after the trigger and data quality 
@@ -61,7 +61,7 @@ greater than 10 GeV. These filters retain roughly 3 - 4\% of the original events
 \footnote{See this wiki for more details 
 {\tt https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/RadiativeZDAODs}.}.
 
-\subsection{Monte Carlo Samples}
+\subsection{Monte Carlo samples}
 \label{subsec:mc}
 In order to study the characteristics of both signal and background events 
 in the data, simulated data known as Monte Carlo samples\footnote{This name
@@ -269,7 +269,7 @@ mc12\_8TeV.167497.PowhegPythia8\_AU2CT10\_VBFH150\_Zllgam.merge.NTUP\_PHOTON.e17
   \end{center}
 \end{sidewaystable}
 
-\subsection{Primary Vertex Definition}
+\subsection{Primary vertex definition}
 Events that pass the selection described below always have at least one
 reconstructed primary vertex. These primary vertices are determined from fits
 to tracks reconstructed in the inner detector and consistent with a common origin.
@@ -279,14 +279,14 @@ classified as hard or soft depending on the amount of momentum transferred
 between the interacting particles. Of the roughly 20 proton-proton interactions
 that occur during each bunch crossing, almost all of them are soft QCD processes.
 This means there is very low momentum transfer in the collision, 
-so mostly consist of glancing collisions between the quarks. 
+so they mostly consist of glancing collisions between the quarks. 
 However, the QCD process that produces a Higgs boson 
 (gluon-gluon fusion) is a hard interaction with high momentum transfer.
 In order to ensure that the primary vertex originated from the original hard 
 interaction, the vertex is chosen with the largest sum of the 
 squared transverse momenta of the tracks associated to it.
 
-\subsection{Final State Particle Reconstruction and Selection}
+\subsection{Final state particle reconstruction and selection}
 Recall that two oppositely charged leptons ($\ell = e, \mu$) and a photon ($\gamma$)
 make up the final state particles of a \HToZg event. This section
 contains information regarding the reconstruction and identification of these 
@@ -294,12 +294,12 @@ particles from their energy deposition in the calorimeters and their tracking
 information provided by the inner detector and the muon spectrometer.
 In addition, the kinematic requirements enforced in order to select $\ell\ell\gamma$
 triples originating from a Higgs decay are outlined. The sections proceed
-as follows: muons, electrons, then photons.
+as follows: muons, electrons, then photon reconstruction.
 
-\subsubsection*{Muon Reconstruction and Identification}
+\subsubsection*{Muon reconstruction and identification}
 In ATLAS four kinds of muon candidates are distinguished depending on the
 way they are reconstructed: stand-alone muons, combined muons, segment tagged muons,
-and calorimeter tagged muons\cite{ATLAS-CONF-2010-064}.
+and calorimeter tagged muons \cite{ATLAS-CONF-2010-064}.
 \begin{itemize}
     \item \textbf{Stand-alone muons (SA):} SA muons are reconstructed entirely from
     tracking information provided by the muon spectrometer. The muons momentum
@@ -332,13 +332,13 @@ and calorimeter tagged muons\cite{ATLAS-CONF-2010-064}.
     can be used to identify muons in the calorimeter.}.
     CT muons are used to cover the region
     $|\eta| \approx 0$ which is not equipped with muon chambers. The purity
-    of these muons is further increased by requiring their
+    of these muons is further increased by requiring that their
     transverse momentum exceed 15 GeV.
 \end{itemize}
 In this analysis, CB, ST or SA muons identified with the STACO reconstruction 
 algorithm as well as CT muons are used.
 
-\subsubsection*{Muon Selection}
+\subsubsection*{Muon selection}
 In the center of the barrel region ($|\eta| < 0.1$), which lacks muon spectrometer
 coverage, calorimeter tagged muons with $\pt > 15 \GeV$ are used. All muon candidates
 identified as muons using the information from the muon spectrometer (combined,
@@ -386,7 +386,7 @@ $d_0$ ($z_0$) with respect to the primary vertex, smaller than 1 mm (10 mm).
 %    \label{tab:muonidhits}
 % \end{table}
  
-\subsubsection*{Electron and Photon Reconstruction}
+\subsubsection*{Electron and photon reconstruction}
 The electron and photon reconstruction are seeded from clusters of energy deposited
 in the electromagnetic calorimeter. The reconstruction is designed to separate 
 electrons, unconverted photons, and photons which have converted in the detector
@@ -414,7 +414,7 @@ photons is improved with corrections, evaluated as a function of the conversion
 radius (i.e. the distance from the beam-line at which the photon converts into an
 \epem pair) based on dedicated Monte-Carlo simulation studies.
 
-\subsubsection*{Electron Selection}
+\subsubsection*{Electron selection}
 Electron candidates are required to have a transverse energy greater than 10 GeV,
 pseudorapidity $|\eta| < 2.47$, and a well-reconstructed ID track pointing to an 
 electromagnetic calorimeter cluster. The cluster should satisfy a set of 
@@ -429,7 +429,7 @@ to have a hit in the $b$-layer when passing through an active $b$-layer module
 and is also required to have a longitudinal impact parameter, with respect to
 the primary vertex, smaller than 10 mm.
 
-\subsubsection*{Photon Selection}
+\subsubsection*{Photon selection}
 Photon candidates are required to have a transverse energy greater than 15 GeV.
 In order to exploit the fine segmentation of the first layer of the electromagnetic
 calorimeter to discriminate between genuine prompt photons (photons directly produced
@@ -455,7 +455,7 @@ Refs. \cite{Cacciari:2008gn, Cacciari:2009dp},
 from the underlying event and additional $pp$ interactions. Photon candidates
 are required to have an isolation transverse energy less than 4 GeV.
 
-\subsubsection*{Overlap Removal}
+\subsubsection*{Overlap removal}
 An overlap removal between the electrons and muons that pass all selection
 criteria and share the same inner detector track within a cone of $\Delta R < 0.02$
 is performed: if the muon is identified by the MS, then the electron candidate is 
@@ -463,7 +463,7 @@ discarded, otherwise the muon candidate is rejected. Photon candidates that are
 within $\Delta R < 0.3$ of a selected electron or muon candidate are also rejected,
 thus suppressing background from final state radiation (FSR) $Z+\gamma$ events.
 
-\subsection{$Z(\ll)$ Reconstruction and Selection}
+\subsection{$Z(\ll)$ reconstruction and selection}
 $Z$ boson candidates are reconstructed from paris of same-flavor, opposite-sign
 leptons passing the previous selections. Muon pairs are required to have no more
 than one muon identified either without the muon spectrometer or in the region
@@ -476,9 +476,9 @@ used to select the event. Finally, an invariant mass requirement $\mass\ell > 65
 is applied in order to remove biases in the simulated $Z$+jet samples which have a 
 generator-level di-lepton invariant mass cut with lower threshold.
 
-\subsection{$H(Z\gamma)$ Reconstruction and Selection}
+\subsection{$H(Z\gamma)$ reconstruction and selection}
 Higgs boson candidates are reconstructed from the combination of the $Z$ candidate
-with invariant mass close to the $Z$ mass and the photons with the largest transverse
+with invariant mass closest to the $Z$ mass and the photons with the largest transverse
 energy. Track and calorimeter isolation requirements are applied to the leptons
 forming the Higgs boson candidate. The normalized track isolation is defined as the 
 sum of the transverse momenta of tracks, $\sum \pt$ inside a cone of $\Delta R < 0.2$

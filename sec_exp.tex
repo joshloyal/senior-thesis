@@ -81,7 +81,7 @@ The integrated luminosity used in this measurement was 4.5 (20.7) \fb in 2011 (2
     \hline\hline
     \end{tabular}
     \caption{Parameters characterizing the LHC's luminosity. The integrated luminosity
-    used in this measurement was 4.6 (20.7) \fb in 2011 (2012).}
+    used in this measurement was 4.6 (20.7) \fb in 2011 (2012) \cite{LHCdesign}.}
     \label{tab:lhcparameters}
   \end{center}
 \end{table}
@@ -117,7 +117,7 @@ are general purpose detectors designed to detect a large spectrum of particles
 with a goal of finding signs of new physics. The measurement presented in this
 paper uses data collected by the ATLAS detector.
 
-\subsection{The ATLAS Detector}
+\subsection{The ATLAS detector}
 \label{subsec:atlas}
 
 The ATLAS detector~\cite{Aad:2008zzm} is a multi-purpose particle physics detector
@@ -175,8 +175,8 @@ are positioned on cylindrical surfaces around the beam axis, and two end-cap par
 where the detector layers are positioned in planes of constant $z$ perpendicular
 to the beam pipe. In addition, the calorimeter consists of a forward 
 and backward part, extending up to a pseudorapidity\footnote{For a description
-of this coordinate see \refS{subsubsec:kinematics}.} of $|\eta| < 4.9$. 
-The dimensions of the various components of the ATLAS detector
+of the coordinate system employed at ATLAS see \refS{subsubsec:kinematics}.} 
+of $|\eta| < 4.9$. The dimensions of the various components of the ATLAS detector
 are displayed in \refT{tab:atlasdim}.
 
 \begin{table}[htbp]
@@ -203,7 +203,7 @@ are displayed in \refT{tab:atlasdim}.
   \end{center}
 \end{table}
 
-\subsubsection{Kinematic Quantities at ATLAS}
+\subsubsection{Kinematic quantities at ATLAS}
 \label{subsubsec:kinematics}
 
 The geometry of the ATLAS detector is defined
@@ -251,20 +251,20 @@ The dilepton invariant mass $m_{\ell\ell}$ is
 where $p_1$ and $p_2$ are the four-momenta of the leptons $\ell^+$ and $\ell^-$.
 Then
 \[
-    m_{\ell\ell} = \sqrt{(p_1 + p_2)^2} = \sqrt{(E_1 + E_2)^2 + (\mathbf{p_1} + \mathbf{p_2})^2}.
+    m_{\ell\ell} = \sqrt{(p_1 + p_2)^2} = \sqrt{(E_1 + E_2)^2 - (\mathbf{p_1} + \mathbf{p_2})^2}.
 \]
 The relationship of $m_{\ell\ell}$ with the mass $m_Z$ of the Z boson is that a
 distribution of $m_{\ell\ell}$ will peak at $m_{Z}$. The concept of invariant
 mass can be generalized to a multi-body system such as \HTollg as follows:
 \[
     m_{\ell\ell\gamma} = \sqrt{(p_{\ell_1} + p_{\ell_2} + p_{\gamma})^2} =
-    \sqrt{(E_{\ell_1} + E_{\ell_2} + E_{\gamma})^2 + (\mathbf{p}_{\ell_1} + 
+    \sqrt{(E_{\ell_1} + E_{\ell_2} + E_{\gamma})^2 - (\mathbf{p}_{\ell_1} + 
     \mathbf{p}_{\ell_2} + \mathbf{p}_{\gamma})^2}. 
 \]
 The distributions of $m_{\ell\ell\gamma}$ and $m_{\ell\ell}$ are the primary
 observables used to search for the Higgs boson in this analysis.
 
-\subsubsection{Particle Identification at ATLAS}
+\subsubsection{Particle identification at ATLAS}
 \label{subsubsec:particleid}
 The ATLAS detector is designed so that the various particles produced in
 proton-proton collisions leave different signatures in the detector. This
@@ -318,7 +318,7 @@ and are inferred through conservation of energy and momentum.
 % known as bremsstrahlung. The combination of ionization and bremsstrahlung
 % is behind the basic operation of the electromagnetic calorimeter.
 
-\subsubsection{The Inner Detector}
+\subsubsection{The inner detector}
 \label{subsubsec:id}
 The inner detector surrounds the beam pipe and provides track reconstruction,
 momentum information, and both primary and secondary vertex measurements for
@@ -342,7 +342,7 @@ charged particles are deflected tangentially
 component of the Lorentz force is $\mathbf{F} = q(\mathbf{v} \times \mathbf{B}$).}.
 Using hits in all three sub-detectors, a
 track of the flight path of a charged particle can be reconstructed. The
-curvature of the track is then used to determine the particle's energy and
+curvature of the track is then used to determine the particle's
 momentum with the familiar relationship $|p| = \frac{q B}{R}$
 where $q$ is the particles charge, $B$ is the strength of the magnetic field, and 
 $R$ is the radius of the particle's track. The required momentum resolution
@@ -380,6 +380,9 @@ sub-systems is displayed in \refT{tab:spaceres}.
 
 \begin{table}[htbp]
   \begin{center}
+    \caption{Spatial resolutions and $\eta$-coverage of the sub-detectors
+    that make up the ATLAS inner detector \cite{Aad:2008zzm}.}
+    \label{tab:spaceres}
     \begin{tabular}{|ll|cc|}
     \hline
     Sub-Detector & Position & Resolution [$\mu$m] & $\eta$ Coverage \\
@@ -395,13 +398,10 @@ sub-systems is displayed in \refT{tab:spaceres}.
      & Radial end-cap straws & 130 & 0.7 - 2.5 \\
     \hline
     \end{tabular}
-    \caption{Spatial resolutions and $\eta$-coverage of the sub-detectors
-    that make up the ATLAS inner detector \cite{Aad:2008zzm}.}
-    \label{tab:spaceres}
   \end{center}
 \end{table}
 
-\subsubsection*{The Pixel Detector}
+\subsubsection*{The pixel detector}
 The pixel detector, which sits as close to the interaction point as possible,
 provides high precision measurements of a particle's track. The system
 consists of 80 million pixels,
@@ -433,16 +433,17 @@ The minimum distance from the primary vertex to the secondary vertex is called
 the impact parameter and it can be broken up into a component in the transverse
 plane ($d_0$) and another component along the $z$-axis ($z_0$). A high resolution
 of the impact parameter enables identification of secondary vertices
-associated with vary short-lived particles such as 
+associated with very short-lived particles such as 
 b-quarks and $\tau$-leptons. This allows for
 better signal to background resolution for important process such as
 $H \to b\bar b$ and $t \to W b$. In terms of
 the polar angle $\theta$ and the particle's transverse momentum, 
 The resolution for $d_o$ is
 $\sigma(d_o) = 11 \bigoplus 60/p_T \sqrt{sin\theta}$ and the resolution in $z_o$
-is $\sigma(z_o) = 70 \bigoplus 100/p_T \sqrt{sin^3\theta}$ in $\mu$m.
+is $\sigma(z_o) = 70 \bigoplus 100/p_T \sqrt{sin^3\theta}$ in $\mu$m 
+\cite{Aad:2008zzm}.
 
-\subsubsection*{The Semiconductor Tracker}
+\subsubsection*{The semiconductor tracker}
 At an intermediate radial range the Semiconductor Tracker (SCT) system contributes
 to the measurement of momentum, impact parameter, and vertex position.
 The SCT operates on the same principles as the pixel
@@ -456,7 +457,7 @@ a track's $R$, $\phi$, and $z$ coordinates.
 The spatial resolution of the SCT system is documented in \refT{tab:spaceres}.
 Two tracks can be distinguished if they are separated by more than 200 $\mu$m.
 
-\subsubsection*{The Transition Radiation Tracker}
+\subsubsection*{The transition radiation tracker}
 The transition radiation tracker (TRT) surrounds both the pixel and SCT detectors.
 The TRT is a straw tracker made of roughly 60 layers of 
 Polymide drift tubes (straws) of 4 mm diameter and filled with a combination
@@ -495,7 +496,7 @@ the particle as an electron (via $E = \gamma m c^2$).
 %   \label{fig:trt}
 % \end{figure}
 
-\subsubsection{The Calorimeter}
+\subsubsection{The calorimeter}
 \label{subsubsec:calo}
 The ATLAS calorimeter system is placed between the inner detector and the muon
 spectrometer. The primary purpose of the calorimeters is to measure the energy
@@ -533,7 +534,7 @@ calorimeter is $> 22$ radiation lengths ($X_0$) in the barrel and $> 24\,X_0$
 in the end-caps.
 An overview of the ATLAS calorimeter system is displayed in \refF{fig:cal}.
 
-\subsubsection*{Electromagnetic Calorimeter}
+\subsubsection*{Electromagnetic calorimeter}
 The EM calorimeter consists of lead absorbers and liquid argon (lAr) sensing
 elements, which provide optimized energy and position resolution for electrons
 and photons within a pseudorapidity range of $|\eta| < 3.2$. The calorimeter
@@ -580,7 +581,7 @@ $\Delta\eta \times \Delta\phi = 0.05 \times 0.025$ and a thickness of
 2 $X_0$, which increases as a function of $\eta$. A summary of the EM 
 calorimeter's resolution is given in \refF{fig:emcal}.
 
-\subsubsection*{Hadronic Calorimeter}
+\subsubsection*{Hadronic calorimeter}
 The hadronic calorimeter encircles the electromagnetic calorimeter and
 provides measurements of jet energy and missing transverse energy. The hadronic
 calorimeter is also responsible for containing hadron showers induced by
@@ -594,6 +595,8 @@ of the hadronic calorimeter is given in \refT{tab:calres}.
 
 \begin{table}[htbp]
   \begin{center}
+    \caption{The resolution and $\eta$ coverage of the ATLAS hadronic calorimeter.}
+    \label{tab:calres}
     \begin{tabular}{|l|c|c|}
     \hline
     Detector component & Required resolution & $\eta$ coverage  \\
@@ -602,8 +605,6 @@ of the hadronic calorimeter is given in \refT{tab:calres}.
     forward & $\sigma_E / E = 100\% / \sqrt{E} \bigoplus 10\%$ & $3.1 < |\eta| < 4.9$ \\
     \hline
     \end{tabular}
-    \caption{The resolution and $\eta$ coverage of the ATLAS hadronic calorimeter.}
-    \label{tab:calres}
   \end{center}
 \end{table}
 
@@ -636,7 +637,7 @@ these calorimeters and the EM calorimeter is that the HEC uses copper absorbers
 and the FCAL uses copper and tungsten. These materials are used instead of lead
 because they interact better with the incident hadrons.
 
-\subsubsection{The Muon Spectrometer}
+\subsubsection{The muon spectrometer}
 \label{subsubsec:muonspec}
 
 The only particles that make it through the calorimeters are muons and neutrinos
@@ -665,7 +666,7 @@ the track of muon's flight path. The muon is then matched to an inner detector
 track by the ATLAS reconstruction software MuID and STACO. This forms one complete
 muon track that traverses the whole ATLAS detector.
 
-\subsubsection*{Toroid Magnets}
+\subsubsection*{Toroid magnets}
 Eight superconducting toroid magnets in the barrel and another eight 
 superconducting toroid magnets in the end-caps create a magnetic field that
 permeates throughout the muon spectrometer. Within the region $|\eta| < 1.4$
@@ -694,7 +695,7 @@ Precision measurements of these
 track coordinates are provided by the Monitored Drift Tubes and the Cathode
 Strip Chambers.
 
-\subsubsection*{Monitored Drift Tubes}
+\subsubsection*{Monitored drift tubes}
 The Monitored Drift Tubes (MDT) consist of three to eight layers of drift tubes
 and covers an $\eta$ range of $|\eta| < 2.7$. However, the inner-most layer of
 the MDT only extends to $|\eta| < 2.0$. The cathode strip chambers are installed at
@@ -711,7 +712,7 @@ coordinates of the muon track in the bending direction, i.e. along the
 beam pipe for muons in the barrel. The resolution of the MDT is 80 $\mu$m per
 tube.
 
-\subsubsection*{Cathode Strip Chambers}
+\subsubsection*{Cathode strip chambers}
 At large pseudorapidities the Cathode Strip Chambers (CSC) replace
 the MDT since their higher granularity allows them to withstand the large
 density of muons in the forward region. The CSC are multi-wire proportional
@@ -756,7 +757,7 @@ the $\eta$ coordinate of the muon. The spatial resolution achieved by the CSC
 is $\Delta \eta \times \Delta \phi = 40~\mu\mathrm{m} \times 5~\mathrm{mm}$.
 The electron drift time is 30 ns, and the time resolution is 7 ns.
 
-\subsubsection*{Muon Triggering System}
+\subsubsection*{Muon triggering system}
 The muon triggering system covers the pseudorapidity range $|\eta| < 2.4$  The
 triggering chambers are designed with three goals in mind: trigger on muons with 
 a transverse momentum greater than a cutoff $p_T^{\text{cut}}$, distinguish
@@ -784,7 +785,7 @@ coordinate to complement the measurement of the MDT's in the radial direction.
 The TGC covers the $|\eta|$ range between 1.05 and 2.7. However, the TGC
 can only trigger up to an $|\eta|$ of 2.4.
 
-\subsection{The Triggering System}
+\subsection{The triggering system}
 The bunch crossing rate for the LHC is $\sim 40$ MHz. At the designed luminosity
 $L = 10^{34}$ cm$^{-2}$ s$^{-1}$ the interaction rate is about 1 GHz. However,
 due to CPU limitations the rate at which events are selected must be reduced
